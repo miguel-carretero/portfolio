@@ -283,3 +283,19 @@ Règle principale :
 Une abstraction ne doit être créée que lorsqu'elle répond à un besoin réel déjà présent dans le projet.
 
 Le dépôt doit donner l'impression d'un projet construit avec des choix techniques réfléchis, et non d'un exercice de démonstration de patterns ou d'un code généré automatiquement sans discernement.
+
+## Workflow de travail validé
+
+Le workflow VS Code + Codex est déjà en place et validé.
+
+Organisation actuelle :
+
+- ChatGPT principal : Tech Lead / coach / arbitrage
+- VS Code : environnement de développement principal
+- Codex dans VS Code : exécution des petites tâches ciblées
+- Work : utilisé ponctuellement pour les tâches plus autonomes ou lourdes
+- PowerShell : terminal principal, généralement intégré à VS Code
+
+Ne pas proposer comme prochaine étape de "préparer" ou "valider" ce workflow : il est déjà opérationnel.
+
+À la fin d'une tâche, proposer uniquement la prochaine étape technique réellement pertinente pour le projet.

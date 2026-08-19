@@ -29,28 +29,28 @@ Priorité du projet :
 
 ## Stack
 
-Stack retenue :
+Stack officielle :
 
 - Next.js
 - React
 - TypeScript
 - CSS Modules
+
+Outils et services du projet :
+
 - CSS Custom Properties
-- Motion pour les animations utiles
 - Git / GitHub
 - Vercel pour le déploiement
 
-Ne pas installer Tailwind.
-
-Ne pas ajouter de dépendance sans raison claire.
+Ne pas utiliser Tailwind ni ajouter de dépendance sans besoin réel. Motion ne doit être utilisé que lorsqu’une tâche le demande explicitement.
 
 ---
 
 ## Source de vérité design
 
-Figma est la source visuelle de référence.
+Figma est la référence visuelle principale.
 
-Ne pas reproduire aveuglément le code généré par Figma.
+Respecter les maquettes sans recopier aveuglément les artefacts techniques ou le code généré par Figma.
 
 Le code Figma sert uniquement de référence pour :
 
@@ -82,7 +82,7 @@ Règle principale :
 
 > Desktop peut composer. Mobile doit raconter.
 
-Sur mobile, privilégier une structure narrative stable :
+Conserver une approche mobile-first : sur mobile, privilégier la lisibilité, l’ordre du contenu et une structure narrative stable :
 
 sur-titre → titre → texte → visuel
 
@@ -114,9 +114,11 @@ Ne jamais utiliser en production des URLs temporaires Figma MCP.
 
 ---
 
-## Animations
+## Animations et polish
 
 Les animations doivent accompagner la lecture, jamais la distraire.
+
+Les animations, micro-interactions et le polish visuel global sont traités lors d’une passe dédiée. Pendant l’intégration statique d’une section, ne pas ajouter d’animation sauf demande explicite.
 
 Utiliser CSS pour :
 
@@ -126,7 +128,7 @@ Utiliser CSS pour :
 - zoom léger
 - flottement décoratif simple
 
-Utiliser Motion lorsque nécessaire pour :
+Utiliser Motion uniquement lorsqu’il est explicitement demandé et nécessaire pour :
 
 - apparition au scroll
 - stagger
@@ -171,6 +173,8 @@ Ne pas modifier des fichiers ou des fonctionnalités non demandés.
 
 Ne pas refactorer une zone sans raison liée à la tâche courante.
 
+Respecter strictement le scope demandé et ne pas modifier les zones voisines sans nécessité.
+
 Réutiliser les composants existants avant d’en créer de nouveaux.
 
 Ne pas transformer chaque morceau d’interface en composant React sans besoin réel.
@@ -179,12 +183,12 @@ Ne pas transformer chaque morceau d’interface en composant React sans besoin r
 
 ## Qualité
 
-Après une tâche importante, exécuter lorsque pertinent :
+À la fin d’une tâche de code, exécuter :
 
-- lint
-- build
+- `npm run lint`
+- `npm run build`
 
-Corriger les erreurs avant de considérer la tâche terminée.
+Corriger les erreurs et signaler clairement tout problème rencontré avant de considérer la tâche terminée.
 
 Préserver :
 
@@ -208,7 +212,7 @@ Convention souhaitée :
 - `refactor:`
 - `docs:`
 
-Ne pas créer de commit ou push automatiquement sauf si la tâche le demande explicitement.
+Ne jamais créer de commit ou push automatiquement : Miguel valide et réalise ces étapes.
 
 ---
 

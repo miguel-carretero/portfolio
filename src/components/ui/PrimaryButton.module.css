@@ -1,0 +1,29 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 18px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, var(--color-accent), #547061);
+  color: var(--color-background);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  transition: filter 160ms ease;
+}
+
+.button:hover {
+  filter: brightness(0.96);
+}
+
+.button:focus-visible {
+  outline: 2px solid var(--color-text-primary);
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button {
+    transition: none;
+  }
+}

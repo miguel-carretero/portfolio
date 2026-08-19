@@ -64,12 +64,11 @@
   color: var(--color-accent);
   font-size: 16px;
   line-height: 1;
-  transition: background-color 160ms ease, transform 160ms ease;
+  transition: background-color 160ms ease;
 }
 
 .cvLink:hover {
   background: color-mix(in srgb, var(--color-accent) 8%, transparent);
-  transform: translateY(-1px);
 }
 
 .mobileCvLink,

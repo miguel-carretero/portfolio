@@ -1,0 +1,68 @@
+.section {
+  min-height: 420px;
+  padding: 80px 24px;
+  background: #f8f8f6;
+  text-align: center;
+}
+
+.titleGroup {
+  max-width: 735px;
+  margin: 0 auto;
+}
+
+.eyebrow {
+  color: var(--color-accent);
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 40px;
+}
+
+.title {
+  color: var(--color-text-primary);
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 39px;
+}
+
+.content {
+  max-width: 1251px;
+  margin: 31px auto 0;
+  color: var(--color-text-secondary);
+  font-size: 18px;
+  font-weight: 200;
+  line-height: 1.25;
+}
+
+.conviction {
+  margin-top: 24px;
+}
+
+.highlight {
+  margin-top: 2px;
+  color: var(--color-text-primary);
+  font-weight: 700;
+}
+
+@media (max-width: 760px) {
+  .section {
+    min-height: 0;
+    padding: 72px 20px;
+  }
+
+  .eyebrow {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  .title {
+    margin-top: 4px;
+    font-size: clamp(30px, 8vw, 36px);
+    line-height: 1.12;
+  }
+
+  .content {
+    margin-top: 28px;
+    font-size: 18px;
+    line-height: 1.4;
+  }
+}

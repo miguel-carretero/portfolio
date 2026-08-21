@@ -1,0 +1,83 @@
+.section {
+  padding: 174px 24px 162px;
+}
+
+.content {
+  max-width: 980px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.eyebrow {
+  color: var(--color-accent);
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.4;
+}
+
+.title {
+  margin-top: 2px;
+  color: var(--color-text-primary);
+  font-size: clamp(30px, 3vw, 36px);
+  font-weight: 700;
+  line-height: 1.12;
+}
+
+.description {
+  max-width: 960px;
+  margin: 14px auto 0;
+  color: var(--color-text-secondary);
+  font-size: clamp(18px, 1.7vw, 22px);
+  font-weight: 300;
+  line-height: 1.35;
+}
+
+.email {
+  display: inline-block;
+  margin-top: 20px;
+  color: var(--color-accent);
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.email:focus-visible {
+  outline: 2px solid var(--color-text-primary);
+  outline-offset: 4px;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 40px;
+}
+
+.actions a {
+  min-width: 201px;
+}
+
+@media (max-width: 759px) {
+  .section {
+    padding: 96px 20px;
+  }
+
+  .description {
+    margin-top: 20px;
+    line-height: 1.45;
+  }
+
+  .email {
+    font-size: 20px;
+  }
+
+  .actions {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 32px;
+  }
+
+  .actions a {
+    width: min(100%, 280px);
+  }
+}

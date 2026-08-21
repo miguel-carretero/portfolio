@@ -66,6 +66,16 @@ Adapter la maquette à une vraie structure web responsive avec HTML sémantique,
 
 ---
 
+## Direction visuelle
+
+Le portfolio doit rester sobre, élégant, premium et intemporel.
+
+Les animations doivent être discrètes, fluides et servir la hiérarchie ou la narration. Préférer des mouvements courts, des amplitudes maîtrisées, des ombres subtiles et des easings doux.
+
+Éviter les effets démonstratifs, surjoués ou gadgets. Le résultat doit évoquer un produit réfléchi et maîtrisé, jamais une démonstration gratuite d’animation.
+
+---
+
 ## Typographie
 
 Le portfolio utilise uniquement :
@@ -85,6 +95,14 @@ Règle principale :
 Conserver une approche mobile-first : sur mobile, privilégier la lisibilité, l’ordre du contenu et une structure narrative stable :
 
 sur-titre → titre → texte → visuel
+
+Pour les sections éditoriales desktop en 2 colonnes texte + visuel, notamment `Mon approche` et `Ce qui nourrit mon approche`, l’ordre mobile doit être :
+
+1. sur-titre / eyebrow
+2. titre
+3. visuel / image
+4. texte descriptif
+5. CTA éventuel
 
 Pour les cartes produit :
 

@@ -1,0 +1,33 @@
+.intro {
+  max-width: 682px;
+}
+
+.eyebrow {
+  color: var(--color-accent);
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.4;
+}
+
+.title {
+  margin-top: 2px;
+  color: var(--color-text-primary);
+  font-size: clamp(30px, 3vw, 36px);
+  font-weight: 700;
+  line-height: 1.12;
+}
+
+.content {
+  display: grid;
+  gap: 18px;
+  margin-top: 44px;
+  color: var(--color-text-secondary);
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.45;
+}
+
+.content strong {
+  color: var(--color-accent);
+  font-weight: 700;
+}

@@ -1,5 +1,8 @@
+import TradeMindDesignSystem from "@/components/trademind/TradeMindDesignSystem";
 import TradeMindHero from "@/components/trademind/TradeMindHero";
+import TradeMindExperience from "@/components/trademind/TradeMindExperience";
 import TradeMindImpact from "@/components/trademind/TradeMindImpact";
+import TradeMindLearnings from "@/components/trademind/TradeMindLearnings";
 import TradeMindProductVision from "@/components/trademind/TradeMindProductVision";
 import TradeMindSolution from "@/components/trademind/TradeMindSolution";
 import TradeMindWhy from "@/components/trademind/TradeMindWhy";
@@ -12,6 +15,9 @@ export default function TradeMindPage() {
       <TradeMindProductVision />
       <TradeMindImpact />
       <TradeMindSolution />
+      <TradeMindExperience />
+      <TradeMindDesignSystem />
+      <TradeMindLearnings />
     </main>
   );
 }

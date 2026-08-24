@@ -12,25 +12,25 @@
 
 .eyebrow {
   color: var(--color-accent);
-  font-size: 18px;
-  font-weight: 300;
-  line-height: 40px;
+  font-size: var(--font-size-eyebrow);
+  font-weight: var(--font-weight-light);
+  line-height: var(--line-height-body);
 }
 
 .title {
   color: var(--color-text-primary);
-  font-size: 36px;
-  font-weight: 700;
-  line-height: 39px;
+  font-size: var(--font-size-section-title);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-title);
 }
 
 .content {
   max-width: 1251px;
   margin: 31px auto 0;
   color: var(--color-text-secondary);
-  font-size: 18px;
-  font-weight: 200;
-  line-height: 1.25;
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-light);
+  line-height: var(--line-height-body);
 }
 
 .conviction {
@@ -40,7 +40,7 @@
 .highlight {
   margin-top: 2px;
   color: var(--color-text-primary);
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
 }
 
 @media (max-width: 760px) {
@@ -49,20 +49,11 @@
     padding: 72px 20px;
   }
 
-  .eyebrow {
-    font-size: 16px;
-    line-height: 1.4;
-  }
-
   .title {
     margin-top: 4px;
-    font-size: clamp(30px, 8vw, 36px);
-    line-height: 1.12;
   }
 
   .content {
     margin-top: 28px;
-    font-size: 18px;
-    line-height: 1.4;
   }
 }

@@ -50,22 +50,22 @@
   color: transparent;
   background: linear-gradient(90deg, var(--color-accent), #547061);
   background-clip: text;
-  font-size: 28px;
-  font-weight: 700;
-  line-height: 1.2;
+  font-size: var(--font-size-card-title);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-title);
 }
 
 .card p {
   margin-top: 20px;
   color: var(--color-text-secondary);
-  font-size: 20px;
-  font-weight: 300;
-  line-height: 1.4;
+  font-size: var(--font-size-card-text);
+  font-weight: var(--font-weight-light);
+  line-height: var(--line-height-body);
   text-align: left;
 }
 
 .card strong {
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
 }
 
 @media (max-width: 1000px) {
@@ -129,36 +129,16 @@
     gap: 0;
   }
 
-  .intro,
-  .intro > div {
-    display: contents;
-  }
-
-  .intro > div > p {
-    order: 1;
-  }
-
-  .intro > div > h2 {
-    order: 2;
-  }
-
   .image {
     order: 3;
     margin-top: 40px;
   }
 
   .intro > div > div {
-    order: 4;
     margin-top: 32px;
   }
 
-  .action {
-    display: contents;
-  }
-
   .action a {
-    order: 5;
-    justify-self: start;
     margin-top: 28px;
   }
 
@@ -171,10 +151,10 @@
   }
 
   .card h3 {
-    font-size: 24px;
+    font-size: var(--font-size-card-title-compact);
   }
 
   .card p {
-    font-size: 18px;
+    font-size: var(--font-size-body);
   }
 }

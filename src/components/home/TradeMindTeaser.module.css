@@ -22,17 +22,18 @@
 
 .eyebrow {
   color: var(--color-text-secondary);
-  font-size: 20px;
-  font-weight: 200;
+  font-size: var(--font-size-eyebrow);
+  font-weight: var(--font-weight-light);
   letter-spacing: 0.02em;
+  line-height: var(--line-height-body);
 }
 
 .projectName {
   margin-top: 4px;
   color: var(--color-text-primary);
   font-size: clamp(38px, 4vw, 43px);
-  font-weight: 700;
-  line-height: 1.1;
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-title);
 }
 
 .projectName span {
@@ -122,18 +123,18 @@
 .content h3 {
   max-width: 570px;
   color: var(--color-text-primary);
-  font-size: clamp(28px, 3vw, 34px);
-  font-weight: 700;
-  line-height: 1.15;
+  font-size: var(--font-size-section-title);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-title);
 }
 
 .content p {
   max-width: 901px;
   margin-top: 34px;
   color: var(--color-text-secondary);
-  font-size: clamp(18px, 2vw, 22px);
-  font-weight: 200;
-  line-height: 1.45;
+  font-size: var(--font-size-body-large);
+  font-weight: var(--font-weight-light);
+  line-height: var(--line-height-body-relaxed);
 }
 
 @media (max-width: 1300px) {
@@ -152,10 +153,6 @@
 
   .divider {
     margin-bottom: 70px;
-  }
-
-  .eyebrow {
-    font-size: 16px;
   }
 
   .screens {

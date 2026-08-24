@@ -39,23 +39,6 @@
     margin-top: 40px;
   }
 
-  .intro,
-  .intro > div {
-    display: contents;
-  }
-
-  .intro > div > p {
-    order: 1;
-  }
-
-  .intro > div > h2 {
-    order: 2;
-  }
-
-  .intro > div > div {
-    order: 4;
-    margin-top: 32px;
-  }
 }
 
 @media (max-width: 759px) {
@@ -63,10 +46,6 @@
     padding: 80px 20px;
   }
 
-  .inner {
-    gap: 0;
-  }
-
   .intro,
   .intro > div {
     display: contents;
@@ -80,13 +59,12 @@
     order: 2;
   }
 
+  .intro > div > div {
+    order: 4;
+  }
+
   .graph {
     order: 3;
     margin-top: 40px;
-  }
-
-  .intro > div > div {
-    order: 4;
-    margin-top: 32px;
   }
 }

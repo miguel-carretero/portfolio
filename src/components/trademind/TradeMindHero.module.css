@@ -20,32 +20,32 @@
 
 .eyebrow {
   color: var(--color-text-secondary);
-  font-size: 18px;
-  font-weight: 300;
-  line-height: 1.4;
+  font-size: var(--font-size-eyebrow);
+  font-weight: var(--font-weight-light);
+  line-height: var(--line-height-body);
 }
 
 .eyebrow span {
   color: var(--color-accent);
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
 }
 
 .title {
   margin-top: 2px;
   color: var(--color-text-primary);
-  font-size: 50px;
-  font-weight: 700;
-  letter-spacing: -0.035em;
-  line-height: 1.03;
+  font-size: var(--font-size-case-study-title);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-display);
+  line-height: var(--line-height-display);
 }
 
 .description {
   max-width: 630px;
   margin-top: 26px;
   color: var(--color-text-secondary);
-  font-size: 22px;
-  font-weight: 300;
-  line-height: 1.38;
+  font-size: var(--font-size-body-large);
+  font-weight: var(--font-weight-light);
+  line-height: var(--line-height-body);
 }
 
 .quote {
@@ -61,8 +61,8 @@
   color: var(--color-accent);
   font-size: 16px;
   font-style: italic;
-  font-weight: 600;
-  line-height: 1.38;
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-body);
 }
 
 .quoteText {
@@ -80,7 +80,7 @@
   color: var(--color-accent-soft);
   font-size: 32px;
   font-style: normal;
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   line-height: 1;
 }
 
@@ -174,7 +174,7 @@
   }
 
   .description {
-    font-size: 19px;
+    font-size: var(--font-size-card-text-compact);
   }
 
   .cards {
@@ -219,13 +219,8 @@
     margin: 0 auto;
   }
 
-  .title {
-    font-size: 35px;
-  }
-
   .description {
     margin-top: 24px;
-    font-size: 19px;
   }
 
   .quote {
@@ -233,7 +228,4 @@
     font-size: 15px;
   }
 
-  .cards {
-    display: none;
-  }
 }

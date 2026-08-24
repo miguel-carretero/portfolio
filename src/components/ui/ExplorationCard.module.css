@@ -42,9 +42,9 @@
   position: relative;
   z-index: 1;
   color: var(--color-text-primary);
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 1.15;
+  font-size: var(--font-size-card-title-compact);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-title);
 }
 
 .content {

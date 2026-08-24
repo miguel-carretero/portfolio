@@ -7,9 +7,9 @@
   border-radius: 10px;
   background: linear-gradient(90deg, var(--color-accent), #547061);
   color: var(--color-background);
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.5;
+  font-size: var(--font-size-control);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-control);
   transition: filter 160ms ease;
 }
 

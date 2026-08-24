@@ -84,6 +84,10 @@ Le portfolio utilise uniquement :
 
 Les références éventuelles à Roboto, Inter ou Poppins dans Figma sont des coquilles et ne doivent pas être utilisées pour le portfolio.
 
+Toute nouvelle section doit réutiliser les styles typographiques globaux existants lorsqu’un rôle visuel équivalent existe. Ne pas inventer localement une nouvelle taille, couleur, graisse ou line-height sans raison explicite liée à la maquette.
+
+Pour toute décision visuelle ou création de style, consulter `docs/design-system.md` et réutiliser les conventions existantes avant d'en créer de nouvelles.
+
 ---
 
 ## Responsive
@@ -92,17 +96,15 @@ Règle principale :
 
 > Desktop peut composer. Mobile doit raconter.
 
-Conserver une approche mobile-first : sur mobile, privilégier la lisibilité, l’ordre du contenu et une structure narrative stable :
-
-sur-titre → titre → texte → visuel
-
-Pour les sections éditoriales desktop en 2 colonnes texte + visuel, notamment `Mon approche` et `Ce qui nourrit mon approche`, l’ordre mobile doit être :
+Conserver une approche mobile-first. Pour les sections éditoriales desktop en deux colonnes texte + visuel, l’ordre mobile par défaut est :
 
 1. sur-titre / eyebrow
 2. titre
-3. visuel / image
+3. visuel / composition / image
 4. texte descriptif
 5. CTA éventuel
+
+Le visuel ne doit pas être placé après le corps de texte sauf exception explicite de la maquette.
 
 Pour les cartes produit :
 
@@ -321,3 +323,60 @@ Organisation actuelle :
 Ne pas proposer comme prochaine étape de "préparer" ou "valider" ce workflow : il est déjà opérationnel.
 
 À la fin d'une tâche, proposer uniquement la prochaine étape technique réellement pertinente pour le projet.
+
+### Typographie globale
+
+La typographie commune du site doit être centralisée dans les styles globaux existants.
+
+Lorsqu’un rôle visuel existe déjà (`hero title`, `section title`, `eyebrow`, `body`, `card title`, `card text`, etc.), toute nouvelle section doit réutiliser les tokens/classes globaux correspondants.
+
+Ne pas recréer localement dans un CSS Module :
+- une nouvelle taille de police
+- une nouvelle graisse
+- une nouvelle couleur de texte
+- un nouveau line-height
+- un nouveau `clamp()`
+
+sauf si la maquette justifie réellement une exception.
+
+Les CSS Modules restent principalement responsables du layout, des espacements spécifiques, du responsive local, du positionnement et des compositions visuelles.
+
+Avant d’ajouter une nouvelle règle typographique locale, vérifier qu’un style global équivalent n’existe pas déjà.
+
+### Nettoyage des styles
+
+Lors d’un refactor ou d’une modification importante, supprimer les règles CSS clairement mortes, dupliquées ou devenues inutiles.
+
+Éviter de conserver plusieurs implémentations différentes pour un même rôle visuel.
+
+### Réutilisation avant création
+
+Avant de créer un nouveau composant, style, token, helper ou pattern :
+1. vérifier si un équivalent existe déjà dans le projet ;
+2. le réutiliser ou l'étendre si cela reste simple ;
+3. ne créer une nouvelle abstraction que si le besoin est réellement différent.
+
+Ne pas dupliquer un pattern existant avec un nom ou une implémentation légèrement différente.
+
+### Cohérence avant optimisation locale
+
+Lorsqu'une nouvelle section est intégrée, privilégier la cohérence avec les sections existantes avant d'optimiser localement son rendu.
+
+Ne pas introduire une nouvelle convention de :
+- typographie
+- espacement
+- breakpoint
+- couleur
+- rayon
+- ombre
+- animation
+si une convention existante répond déjà au besoin.
+
+### Inspecter avant modifier
+
+Pour une tâche qui touche un système existant :
+- inspecter d'abord les composants et styles voisins ;
+- identifier les patterns déjà utilisés ;
+- modifier ensuite.
+
+Ne pas implémenter une section isolément sans tenir compte du reste du site.

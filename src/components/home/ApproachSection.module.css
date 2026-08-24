@@ -179,33 +179,12 @@
     padding: 80px 20px;
   }
 
-  .inner {
-    gap: 0;
-  }
-
-  .intro,
-  .intro > div {
-    display: contents;
-  }
-
-  .intro > div > p {
-    order: 1;
-  }
-
-  .intro > div > h2 {
-    order: 2;
-  }
-
   .diagram {
-    order: 3;
-    grid-column: auto;
-    grid-row: auto;
     width: min(100%, 400px);
     margin-top: 40px;
   }
 
   .intro > div > div {
-    order: 4;
     margin-top: 32px;
   }
 
@@ -227,5 +206,4 @@
     width: 31%;
     height: auto;
   }
-
 }

@@ -10,35 +10,35 @@
 
 .eyebrow {
   color: var(--color-accent);
-  font-size: 18px;
-  font-weight: 300;
-  line-height: 1.4;
+  font-size: var(--font-size-eyebrow);
+  font-weight: var(--font-weight-light);
+  line-height: var(--line-height-body);
 }
 
 .title {
   margin-top: 2px;
   color: var(--color-text-primary);
-  font-size: clamp(30px, 3vw, 36px);
-  font-weight: 700;
-  line-height: 1.12;
+  font-size: var(--font-size-section-title);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-title);
 }
 
 .description {
   max-width: 960px;
   margin: 14px auto 0;
   color: var(--color-text-secondary);
-  font-size: clamp(18px, 1.7vw, 22px);
-  font-weight: 300;
-  line-height: 1.35;
+  font-size: var(--font-size-body-large);
+  font-weight: var(--font-weight-light);
+  line-height: var(--line-height-body);
 }
 
 .email {
   display: inline-block;
   margin-top: 20px;
   color: var(--color-accent);
-  font-size: 22px;
-  font-weight: 700;
-  line-height: 1.35;
+  font-size: var(--font-size-body-large);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-body);
 }
 
 .email:focus-visible {

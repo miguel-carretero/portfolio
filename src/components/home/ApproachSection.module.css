@@ -135,8 +135,9 @@
   }
 
   .inner {
-    grid-template-columns: minmax(0, 682px);
+    grid-template-columns: minmax(0, 1fr);
     gap: 0;
+    width: 100%;
   }
 
   .intro,

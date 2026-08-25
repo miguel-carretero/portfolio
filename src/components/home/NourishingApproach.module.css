@@ -74,13 +74,15 @@
   }
 
   .mainContent {
-    grid-template-columns: minmax(0, 677px);
+    grid-template-columns: minmax(0, 1fr);
     gap: 0;
+    width: 100%;
   }
 
   .image {
     max-width: 592px;
     order: 3;
+    justify-self: center;
     margin-top: 40px;
   }
 

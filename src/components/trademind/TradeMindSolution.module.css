@@ -127,9 +127,9 @@
 
   .intro {
     order: 1;
-    width: min(100%, 682px);
-    margin: 0 auto;
-    text-align: center;
+    width: 100%;
+    margin: 0;
+    text-align: left;
   }
 
   .visual {
@@ -141,9 +141,9 @@
 
   .copy {
     order: 3;
-    width: min(100%, 682px);
-    margin: 36px auto 0;
-    text-align: center;
+    width: 100%;
+    margin: 36px 0 0;
+    text-align: left;
   }
 }
 

@@ -30,20 +30,8 @@
   .inner {
     grid-template-columns: minmax(0, 1fr);
     gap: 0;
-    max-width: 682px;
-  }
-
-  .graph {
-    max-width: 607px;
-    order: 3;
-    margin-top: 40px;
-  }
-
-}
-
-@media (max-width: 759px) {
-  .section {
-    padding: 80px 20px;
+    width: 100%;
+    max-width: none;
   }
 
   .intro,
@@ -64,7 +52,16 @@
   }
 
   .graph {
+    width: min(100%, 607px);
+    max-width: none;
     order: 3;
+    justify-self: center;
     margin-top: 40px;
+  }
+}
+
+@media (max-width: 759px) {
+  .section {
+    padding: 80px 20px;
   }
 }

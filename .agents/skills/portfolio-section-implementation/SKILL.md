@@ -60,6 +60,8 @@ Never leave descriptive text before the visual when the section follows this pat
 
 Keep complex asset compositions together when they must remain a single visual group. Avoid horizontal overflow.
 
+For any section that switches to a vertical layout at `1100px` or below, verify that no unnecessary desktop `max-width` still constrains its editorial blocks and that the text uses the useful container width rather than becoming a narrow centered column. Check the transition and intermediate layouts at `1101px`, `1100px`, approximately `900px`, `768px` and `390px`.
+
 ## 7. Review before handing off
 
 Before completion, check:

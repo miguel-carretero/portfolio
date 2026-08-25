@@ -88,6 +88,12 @@ Les espacements verticaux restent principalement spécifiques aux sections et so
 - Les compositions visuelles doivent conserver leur ratio et ne pas créer d’overflow horizontal.
 - Une composition décorative complexe peut être réduite ou masquée lorsque sa lisibilité n’est plus garantie.
 
+### Largeur éditoriale et texte
+
+- À partir de `1101px`, conserver les compositions desktop prévues par la maquette et leurs largeurs éditoriales.
+- Lorsqu’une section passe en layout vertical à `1100px` ou moins, ses blocs éditoriaux utilisent toute la largeur utile du container (`width: 100%` lorsque pertinent) et ne conservent pas les `max-width` hérités de leurs anciennes colonnes desktop. Les gutters restent ceux du container : ne pas recréer une petite colonne centrée.
+- Pour les longs paragraphes éditoriaux, utiliser `text-align: justify` uniquement lorsque la maquette le prévoit et que le rendu reste lisible. Ne jamais l’appliquer aux titres, eyebrows, CTA, labels ou textes courts ; sur petit écran, revenir localement à `text-align: left` si les espacements entre les mots deviennent excessifs.
+
 ### Breakpoints réellement utilisés
 
 | Seuil | Usage actuel |

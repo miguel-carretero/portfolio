@@ -106,6 +106,8 @@ Conserver une approche mobile-first. Pour les sections éditoriales desktop en d
 
 Le visuel ne doit pas être placé après le corps de texte sauf exception explicite de la maquette.
 
+Sous `1100px`, une section empilée doit exploiter la largeur utile du container et ne pas conserver les contraintes de largeur de ses colonnes desktop.
+
 Pour les cartes produit :
 
 image → titre → texte

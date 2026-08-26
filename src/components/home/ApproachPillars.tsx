@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Reveal from "@/components/ui/Reveal";
 import SectionIntro from "@/components/ui/SectionIntro";
 import styles from "./ApproachPillars.module.css";
 
@@ -42,15 +43,16 @@ const pillars: Pillar[] = [
 export default function ApproachPillars() {
   return (
     <section className={styles.section} aria-label="Les trois piliers de ma démarche">
-      <div className={styles.intro}>
+      <Reveal className={styles.intro}>
         <SectionIntro eyebrow="" title="Les trois piliers de ma démarche">
           {null}
         </SectionIntro>
-      </div>
+      </Reveal>
 
       <div className={styles.cards}>
-        {pillars.map((pillar) => (
-          <article className={styles.card} key={pillar.title}>
+        {pillars.map((pillar, index) => (
+          <Reveal className={styles.cardReveal} delay={index * 0.07} key={pillar.title}>
+            <article className={styles.card}>
             <header className={styles.header}>
               <span className={styles.iconWrap}>
                 <Image src={`${portfolioPath}${pillar.icon}`} alt="" width={43} height={43} />
@@ -70,7 +72,8 @@ export default function ApproachPillars() {
             ) : null}
 
             <p>{pillar.description}</p>
-          </article>
+            </article>
+          </Reveal>
         ))}
       </div>
     </section>

@@ -179,6 +179,18 @@ Comportement attendu :
 - fermeture au clic extérieur
 - comportement accessible au clavier
 
+## Motion
+
+- Utiliser `Reveal` comme primitive commune pour les apparitions au scroll.
+- Conserver les animations spécifiques dans les composants concernés uniquement.
+- Utiliser CSS pour les hovers et micro-interactions simples.
+- Privilégier `transform` et `opacity`.
+- Respecter systématiquement `prefers-reduced-motion`.
+- Éviter les scroll listeners custom inutiles, les blur/filter animés, `will-change` généralisé et les animations permanentes sans valeur.
+- Ne pas ajouter de Client Component uniquement pour animer un bloc si une solution plus locale suffit.
+- Ne pas créer de système motion générique complexe, provider ou abstraction « au cas où ».
+- La motion doit accompagner la lecture, jamais devenir démonstrative.
+
 ---
 
 ## Règles de développement

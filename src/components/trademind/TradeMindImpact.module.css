@@ -48,6 +48,11 @@
   border-radius: 12px;
   background: var(--color-background);
   box-shadow: 0 0 20px rgb(0 0 0 / 9%);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.cardReveal > .card {
+  height: 100%;
 }
 
 .card h3 {
@@ -65,6 +70,13 @@
   font-size: var(--font-size-card-text);
   font-weight: var(--font-weight-light);
   line-height: var(--line-height-body);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .card:hover {
+    box-shadow: 0 8px 26px rgb(0 0 0 / 12%);
+    transform: translateY(-4px);
+  }
 }
 
 @media (max-width: 760px) {
@@ -96,5 +108,11 @@
 
   .card p {
     font-size: var(--font-size-body);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card {
+    transition: none;
   }
 }

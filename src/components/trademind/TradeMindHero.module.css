@@ -132,6 +132,36 @@
   height: auto;
 }
 
+.profileFloat {
+  animation: float-trademind 9.4s ease-in-out infinite;
+}
+
+.diversificationFloat {
+  animation: float-highlight-trademind 6.8s ease-in-out infinite;
+}
+
+@keyframes float-trademind {
+  0%,
+  100% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: rotate(1deg) translate3d(6px, -12px, 0);
+  }
+}
+
+@keyframes float-highlight-trademind {
+  0%,
+  100% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: rotate(-1.2deg) translate3d(-4px, 8px, 0);
+  }
+}
+
 .scoreCard {
   z-index: 1;
   top: 19%;
@@ -202,6 +232,11 @@
   .cards {
     display: none;
   }
+
+  .profileFloat,
+  .diversificationFloat {
+    animation: none;
+  }
 }
 
 @media (max-width: 760px) {
@@ -228,4 +263,11 @@
     font-size: 15px;
   }
 
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .profileFloat,
+  .diversificationFloat {
+    animation: none;
+  }
 }

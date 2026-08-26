@@ -59,6 +59,11 @@
   left: 26px;
   height: 4px;
   background: linear-gradient(90deg, #d0d3d1 0%, #aab7b0 38%, var(--color-accent) 100%);
+  transform-origin: left center;
+}
+
+.mobileTrack {
+  display: none;
 }
 
 .track::after {
@@ -175,6 +180,15 @@
     width: 4px;
     height: auto;
     background: linear-gradient(180deg, #d0d3d1 0%, #aab7b0 38%, var(--color-accent) 100%);
+    transform-origin: center top;
+  }
+
+  .desktopTrack {
+    display: none;
+  }
+
+  .mobileTrack {
+    display: block;
   }
 
   .track::after {

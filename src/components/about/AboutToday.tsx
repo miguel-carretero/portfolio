@@ -1,11 +1,12 @@
 import PrimaryButton from "@/components/ui/PrimaryButton";
+import Reveal from "@/components/ui/Reveal";
 import SecondaryButton from "@/components/ui/SecondaryButton";
 import styles from "./AboutToday.module.css";
 
 export default function AboutToday() {
   return (
     <section className={styles.section} aria-labelledby="about-today-title">
-      <div className={styles.inner}>
+      <Reveal className={styles.inner}>
         <h2 id="about-today-title">Aujourd&apos;hui</h2>
         <div className={styles.copy}>
           <p>
@@ -32,7 +33,7 @@ export default function AboutToday() {
             Télécharger mon CV
           </PrimaryButton>
         </div>
-      </div>
+      </Reveal>
     </section>
   );
 }

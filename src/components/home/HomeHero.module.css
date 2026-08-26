@@ -107,6 +107,12 @@
   pointer-events: none;
 }
 
+.cardReveal {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
 .colorBlock {
   position: absolute;
   display: flex;
@@ -136,6 +142,7 @@
   padding: 16px;
   background: #427dad;
   transform: rotate(48deg);
+  animation: float-primary 9.4s ease-in-out infinite;
   font-size: 18px;
 }
 
@@ -147,6 +154,7 @@
   padding: 10px;
   background: #337c89;
   transform: rotate(30deg);
+  animation: float-secondary 7.4s ease-in-out infinite;
   font-size: 11px;
 }
 
@@ -158,6 +166,7 @@
   padding: 12px;
   background: #ffb63b;
   transform: rotate(-15deg);
+  animation: float-background 9.6s ease-in-out infinite;
   font-size: 12px;
 }
 
@@ -169,6 +178,7 @@
   padding: 12px;
   background: #e58f91;
   transform: rotate(21deg);
+  animation: float-highlight 6.8s ease-in-out infinite;
   font-size: 14px;
 }
 
@@ -259,6 +269,36 @@
   .colorBlocks {
     display: none;
   }
+
+  .colorBlock {
+    animation: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .colorBlock {
+    animation: none;
+  }
+}
+
+@keyframes float-primary {
+  0%, 100% { transform: rotate(48deg) translate3d(0, 0, 0); }
+  50% { transform: rotate(49deg) translate3d(6px, -12px, 0); }
+}
+
+@keyframes float-secondary {
+  0%, 100% { transform: rotate(30deg) translate3d(0, 0, 0); }
+  50% { transform: rotate(28.8deg) translate3d(-3px, -7px, 0); }
+}
+
+@keyframes float-background {
+  0%, 100% { transform: rotate(-15deg) translate3d(0, 0, 0); }
+  50% { transform: rotate(-13.8deg) translate3d(3px, 7px, 0); }
+}
+
+@keyframes float-highlight {
+  0%, 100% { transform: rotate(21deg) translate3d(0, 0, 0); }
+  50% { transform: rotate(19.8deg) translate3d(-4px, 8px, 0); }
 }
 
 @media (max-width: 759px) {

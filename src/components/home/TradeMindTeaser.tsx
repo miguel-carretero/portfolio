@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion, useReducedMotion } from "motion/react";
+import Reveal from "@/components/ui/Reveal";
 import styles from "./TradeMindTeaser.module.css";
 
 export default function TradeMindTeaser() {
@@ -17,13 +18,13 @@ export default function TradeMindTeaser() {
 
   return (
     <section className={styles.section} aria-labelledby="trademind-heading">
-      <div className={styles.intro}>
+      <Reveal className={styles.intro}>
         <span className={styles.divider} aria-hidden="true" />
         <p className={styles.eyebrow}>PROJET PHARE</p>
         <h2 id="trademind-heading" className={styles.projectName}>
           Trade<span>Mind</span>
         </h2>
-      </div>
+      </Reveal>
 
       <div className={styles.screens}>
         <motion.span
@@ -128,13 +129,13 @@ export default function TradeMindTeaser() {
         </motion.div>
       </div>
 
-      <div className={styles.content}>
+      <Reveal className={styles.content} delay={0.12}>
         <h3>Comprendre l&apos;investisseur derrière le portefeuille.</h3>
         <p>
           TradeMind est un compagnon comportemental conçu pour aider les investisseurs à prendre du
           recul sur leurs décisions et à développer de meilleures habitudes d&apos;investissement.
         </p>
-      </div>
+      </Reveal>
     </section>
   );
 }

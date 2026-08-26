@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import hoverStyles from "../ui/ButtonHover.module.css";
 import styles from "./Header.module.css";
 
 const navigationItems = [
@@ -65,15 +66,26 @@ export default function Header() {
         </a>
       </nav>
 
-      <a className={styles.cvLink} href="/miguel-carretero-cv.pdf" download>
-        Télécharger mon CV
-        <Image
-          src="/images/portfolio/download-icon.png"
-          alt=""
-          width={18}
-          height={18}
-          aria-hidden="true"
-        />
+      <a className={`${styles.cvLink} ${hoverStyles.buttonHover}`} href="/miguel-carretero-cv.pdf" download>
+        <span className={hoverStyles.content}>Télécharger mon CV</span>
+        <span className={`${styles.downloadIcon} ${hoverStyles.content}`}>
+          <Image
+            className={styles.downloadIconGreen}
+            src="/images/portfolio/download-icon.png"
+            alt=""
+            width={18}
+            height={18}
+            aria-hidden="true"
+          />
+          <Image
+            className={styles.downloadIconWhite}
+            src="/images/portfolio/hero-download-icon.png"
+            alt=""
+            width={18}
+            height={18}
+            aria-hidden="true"
+          />
+        </span>
       </a>
 
       <button

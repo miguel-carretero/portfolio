@@ -1,11 +1,12 @@
 import PrimaryButton from "@/components/ui/PrimaryButton";
+import Reveal from "@/components/ui/Reveal";
 import SecondaryButton from "@/components/ui/SecondaryButton";
 import styles from "./ClosingCta.module.css";
 
 export default function ClosingCta() {
   return (
     <section className={styles.section} aria-labelledby="closing-cta-title">
-      <div className={styles.content}>
+      <Reveal className={styles.content}>
         <p className={styles.eyebrow}>ET MAINTENANT ?</p>
         <h2 id="closing-cta-title" className={styles.title}>
           Construisons la suite
@@ -29,7 +30,7 @@ export default function ClosingCta() {
             Télécharger mon CV
           </PrimaryButton>
         </div>
-      </div>
+      </Reveal>
     </section>
   );
 }

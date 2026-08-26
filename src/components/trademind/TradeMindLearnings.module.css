@@ -24,7 +24,7 @@
   line-height: var(--line-height-title);
 }
 
-.content {
+.content p {
   max-width: 1142px;
   margin: 24px auto 0;
   color: var(--color-text-secondary);

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import ExplorationCard from "@/components/ui/ExplorationCard";
+import Reveal from "@/components/ui/Reveal";
 import SectionIntro from "@/components/ui/SectionIntro";
 import SecondaryButton from "@/components/ui/SecondaryButton";
 import styles from "./ProjectExplorations.module.css";
@@ -9,17 +10,18 @@ const portfolioPath = "/images/portfolio/";
 export default function ProjectExplorations() {
   return (
     <section className={styles.section} aria-label="Ce que ce projet m’a permis d’explorer">
-      <div className={styles.intro}>
+      <Reveal className={styles.intro}>
         <SectionIntro
           eyebrow=""
           title="Ce que ce projet m’a permis d’explorer"
         >
           {null}
         </SectionIntro>
-      </div>
+      </Reveal>
 
       <div className={styles.cards}>
-        <ExplorationCard icon={`${portfolioPath}Brain.svg`} title="Product Thinking">
+        <Reveal className={styles.cardReveal}>
+          <ExplorationCard icon={`${portfolioPath}Brain.svg`} title="Product Thinking">
           <div className={styles.thinkingVisual}>
             <div className={styles.thinkingStep}>
               <Image src={`${portfolioPath}Search.svg`} alt="" width={36} height={36} />
@@ -43,9 +45,11 @@ export default function ProjectExplorations() {
           <p className={styles.cardText}>
             Identifier un problème, définir une vision produit et concevoir une solution cohérente.
           </p>
-        </ExplorationCard>
+          </ExplorationCard>
+        </Reveal>
 
-        <ExplorationCard icon={`${portfolioPath}Figma.svg`} title="Design System">
+        <Reveal className={styles.cardReveal} delay={0.07}>
+          <ExplorationCard icon={`${portfolioPath}Figma.svg`} title="Design System">
           <div className={styles.designSystemVisual}>
             <div className={styles.colorRow}>
               <p className={styles.visualLabel}>Couleurs</p>
@@ -80,9 +84,11 @@ export default function ProjectExplorations() {
           <p className={styles.cardText}>
             Poser des fondations cohérentes pour rendre le produit plus lisible, plus stable et plus facile à faire évoluer.
           </p>
-        </ExplorationCard>
+          </ExplorationCard>
+        </Reveal>
 
-        <ExplorationCard icon={`${portfolioPath}Source Code.svg`} title="Design & Front-End">
+        <Reveal className={styles.cardReveal} delay={0.14}>
+          <ExplorationCard icon={`${portfolioPath}Source Code.svg`} title="Design & Front-End">
           <div className={styles.frontEndVisual}>
             <div className={styles.figmaPanel}>
               <span className={styles.panelLabel}>Composant Figma</span>
@@ -121,7 +127,8 @@ export default function ProjectExplorations() {
           <p className={styles.cardText}>
             Concevoir des interfaces réalisables en gardant à l&apos;esprit les contraintes de développement.
           </p>
-        </ExplorationCard>
+          </ExplorationCard>
+        </Reveal>
       </div>
 
       <div className={styles.cta}>

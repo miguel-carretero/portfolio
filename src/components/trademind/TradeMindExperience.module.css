@@ -46,6 +46,11 @@
   border-radius: 10px;
   background: var(--color-background);
   box-shadow: 0 1px 19.5px rgb(0 0 0 / 9%);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.cardReveal > .card {
+  height: 100%;
 }
 
 .thumbnail {
@@ -96,6 +101,11 @@
   .card:hover .thumbnail img {
     transform: scale(1.025);
   }
+
+  .card:hover {
+    box-shadow: 0 8px 26px rgb(0 0 0 / 12%);
+    transform: translateY(-4px);
+  }
 }
 
 @media (max-width: 1000px) {
@@ -141,7 +151,8 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .thumbnail img {
+  .thumbnail img,
+  .card {
     transition: none;
   }
 }

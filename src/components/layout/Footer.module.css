@@ -54,6 +54,9 @@
 }
 
 .action {
+  --button-hover-fill: rgb(255 255 255 / 12%);
+  --button-hover-color: var(--color-background);
+
   display: inline-grid;
   width: 50px;
   height: 50px;
@@ -63,11 +66,6 @@
   color: var(--color-background);
   font-weight: 800;
   line-height: 1;
-  transition: background-color 160ms ease;
-}
-
-.action:hover {
-  background: rgb(255 255 255 / 12%);
 }
 
 .action:focus-visible {
@@ -119,11 +117,5 @@
   .copyright {
     order: 4;
     margin-top: 0;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .action {
-    transition: none;
   }
 }

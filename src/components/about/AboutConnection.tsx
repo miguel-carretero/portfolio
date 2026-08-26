@@ -1,15 +1,16 @@
 import Image from "next/image";
+import Reveal from "@/components/ui/Reveal";
 import styles from "./AboutConnection.module.css";
 
 export default function AboutConnection() {
   return (
     <section className={styles.section} aria-labelledby="about-connection-title">
       <div className={styles.inner}>
-        <div className={styles.heading}>
+        <Reveal className={styles.heading}>
           <h2 id="about-connection-title">Relier métier, design et technique</h2>
-        </div>
+        </Reveal>
 
-        <div className={styles.visual}>
+        <Reveal className={styles.visual} variant="visual" delay={0.08}>
           <Image
             src="/images/portfolio/link work design tech.png"
             alt="Schéma reliant les besoins métier, le design, la technique et le produit"
@@ -17,9 +18,9 @@ export default function AboutConnection() {
             height={824}
             sizes="(max-width: 1100px) 100vw, 520px"
           />
-        </div>
+        </Reveal>
 
-        <div className={styles.copy}>
+        <Reveal className={styles.copy} delay={0.12}>
           <p>
             Mon parcours m&apos;a conduit à travailler à l&apos;<strong>
               intersection du design, de la technique et des enjeux métier.
@@ -39,7 +40,7 @@ export default function AboutConnection() {
             Cette vision transversale me permet aujourd&apos;hui de contribuer à la conception de
             solutions plus cohérentes et plus pertinentes.
           </p>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

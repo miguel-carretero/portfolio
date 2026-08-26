@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { motion, useReducedMotion } from "motion/react";
 import styles from "./AboutExperience.module.css";
 
 const timelineSteps = [
@@ -26,9 +29,20 @@ const timelineSteps = [
 ];
 
 export default function AboutExperience() {
+  const shouldReduceMotion = useReducedMotion();
+  const ease = [0.22, 1, 0.36, 1] as const;
+  const editorialInitial = shouldReduceMotion ? false : { opacity: 0, y: 16 };
+  const stepInitial = shouldReduceMotion ? false : { opacity: 0, y: 10, scale: 0.985 };
+
   return (
     <section className={styles.section} aria-labelledby="about-experience-title">
-      <div className={styles.intro}>
+      <motion.div
+        className={styles.intro}
+        initial={editorialInitial}
+        whileInView={shouldReduceMotion ? undefined : { opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.25 }}
+        transition={{ duration: 0.54, ease }}
+      >
         <h2 id="about-experience-title">Une expérience construite sur le terrain</h2>
         <p>
           <strong>Depuis près de 20 ans,</strong> j&apos;évolue dans l&apos;univers du numérique à
@@ -49,7 +63,7 @@ export default function AboutExperience() {
           Aujourd&apos;hui, cette expérience nourrit ma manière d&apos;aborder les sujets avec davantage
           de recul, de <strong>pragmatisme</strong> et de confiance.
         </p>
-      </div>
+      </motion.div>
 
       <div className={styles.timeline}>
         <div className={styles.dates} aria-hidden="true">
@@ -57,21 +71,49 @@ export default function AboutExperience() {
           <span>2026</span>
         </div>
 
-        <div className={styles.track} aria-hidden="true" />
+        <motion.div
+          className={`${styles.track} ${styles.desktopTrack}`}
+          aria-hidden="true"
+          initial={shouldReduceMotion ? false : { opacity: 0, scaleX: 0 }}
+          whileInView={shouldReduceMotion ? undefined : { opacity: 1, scaleX: 1 }}
+          viewport={{ once: true, amount: 0.25 }}
+          transition={{ duration: 0.32, ease }}
+        />
+        <motion.div
+          className={`${styles.track} ${styles.mobileTrack}`}
+          aria-hidden="true"
+          initial={shouldReduceMotion ? false : { opacity: 0, scaleY: 0 }}
+          whileInView={shouldReduceMotion ? undefined : { opacity: 1, scaleY: 1 }}
+          viewport={{ once: true, amount: 0.25 }}
+          transition={{ duration: 0.32, ease }}
+        />
 
         <ol className={styles.steps}>
-          {timelineSteps.map((step) => (
-            <li className={styles.step} key={step.title}>
+          {timelineSteps.map((step, index) => (
+            <motion.li
+              className={styles.step}
+              key={step.title}
+              initial={stepInitial}
+              whileInView={shouldReduceMotion ? undefined : { opacity: 1, y: 0, scale: 1 }}
+              viewport={{ once: true, amount: 0.25 }}
+              transition={{ duration: 0.42, delay: 0.14 + index * 0.13, ease }}
+            >
               <span className={styles.point} aria-hidden="true" />
               <span className={styles.connector} aria-hidden="true" />
               <span className={styles.icon}>
                 <Image src={`/images/portfolio/${step.icon}`} alt="" width={42} height={42} />
               </span>
-              <div className={styles.copy}>
+              <motion.div
+                className={styles.copy}
+                initial={shouldReduceMotion ? false : { opacity: 0, y: 6 }}
+                whileInView={shouldReduceMotion ? undefined : { opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.25 }}
+                transition={{ duration: 0.36, delay: 0.22 + index * 0.13, ease }}
+              >
                 <h3>{step.title}</h3>
                 <p>{step.description}</p>
-              </div>
-            </li>
+              </motion.div>
+            </motion.li>
           ))}
         </ol>
       </div>

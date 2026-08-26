@@ -1,4 +1,7 @@
 .button {
+  --button-hover-fill: #547061;
+  --button-hover-color: var(--color-background);
+
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -10,20 +13,9 @@
   font-size: var(--font-size-control);
   font-weight: var(--font-weight-medium);
   line-height: var(--line-height-control);
-  transition: filter 160ms ease;
-}
-
-.button:hover {
-  filter: brightness(0.96);
 }
 
 .button:focus-visible {
   outline: 2px solid var(--color-text-primary);
   outline-offset: 4px;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .button {
-    transition: none;
-  }
 }

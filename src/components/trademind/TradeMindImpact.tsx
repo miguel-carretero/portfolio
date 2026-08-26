@@ -1,3 +1,4 @@
+import Reveal from "@/components/ui/Reveal";
 import styles from "./TradeMindImpact.module.css";
 
 const impacts = [
@@ -26,7 +27,7 @@ const impacts = [
 export default function TradeMindImpact() {
   return (
     <section className={styles.section} aria-labelledby="trademind-impact-title">
-      <div className={styles.intro}>
+      <Reveal className={styles.intro}>
         <p className={styles.eyebrow}>LA TRANSFORMATION RECHERCHÉE</p>
         <h2 id="trademind-impact-title" className={styles.title}>
           Vers une prise de décision plus réfléchie
@@ -35,14 +36,16 @@ export default function TradeMindImpact() {
           TradeMind accompagne progressivement l&apos;investisseur vers des
           décisions plus sereines, plus disciplinées et plus conscientes.
         </p>
-      </div>
+      </Reveal>
 
       <div className={styles.grid}>
-        {impacts.map((impact) => (
-          <article className={styles.card} key={impact.title}>
+        {impacts.map((impact, index) => (
+          <Reveal className={styles.cardReveal} delay={index * 0.08} key={impact.title}>
+            <article className={styles.card}>
             <h3>{impact.title}</h3>
             <p>{impact.description}</p>
-          </article>
+            </article>
+          </Reveal>
         ))}
       </div>
     </section>

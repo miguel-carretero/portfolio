@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import ImageLightbox, { type LightboxImage } from "@/components/ui/ImageLightbox";
+import Reveal from "@/components/ui/Reveal";
 import styles from "./TradeMindExperience.module.css";
 
 type ProductScreen = {
@@ -61,7 +62,7 @@ export default function TradeMindExperience() {
   return (
     <>
       <section className={styles.section} aria-labelledby="trademind-experience-title">
-        <div className={styles.intro}>
+        <Reveal className={styles.intro}>
           <p className={styles.eyebrow}>L&apos;EXPÉRIENCE PRODUIT</p>
           <h2 id="trademind-experience-title" className={styles.title}>
             Une expérience pensée
@@ -73,11 +74,12 @@ export default function TradeMindExperience() {
             expérience cohérente centrée sur la compréhension des comportements de
             l&apos;investisseur.
           </p>
-        </div>
+        </Reveal>
 
         <div className={styles.grid}>
-          {productScreens.map((screen) => (
-            <article className={styles.card} key={screen.title}>
+          {productScreens.map((screen, index) => (
+            <Reveal className={styles.cardReveal} variant="visual" delay={index * 0.08} key={screen.title}>
+              <article className={styles.card}>
               <button
                 className={styles.thumbnail}
                 type="button"
@@ -94,7 +96,8 @@ export default function TradeMindExperience() {
               </button>
               <h3>{screen.title}</h3>
               <p>{screen.description}</p>
-            </article>
+              </article>
+            </Reveal>
           ))}
         </div>
       </section>

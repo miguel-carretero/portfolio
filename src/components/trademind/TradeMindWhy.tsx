@@ -1,18 +1,19 @@
+import Reveal from "@/components/ui/Reveal";
 import styles from "./TradeMindWhy.module.css";
 
 export default function TradeMindWhy() {
   return (
     <section className={styles.section} aria-labelledby="trademind-why-title">
-      <div className={styles.titleGroup}>
+      <Reveal className={styles.titleGroup}>
         <p className={styles.eyebrow}>POURQUOI TRADEMIND EXISTE</p>
         <h2 id="trademind-why-title" className={styles.title}>
           Les plateformes montrent les marchés.
           <br />
           Pas les comportements.
         </h2>
-      </div>
+      </Reveal>
 
-      <div className={styles.content}>
+      <Reveal className={styles.content} delay={0.1}>
         <p>
           Les plateformes d&apos;investissement fournissent une quantité importante
           de données financières : performances, graphiques, actualités ou
@@ -25,7 +26,7 @@ export default function TradeMindWhy() {
           comprendre ses comportements est aussi important que comprendre les
           marchés.
         </p>
-      </div>
+      </Reveal>
     </section>
   );
 }

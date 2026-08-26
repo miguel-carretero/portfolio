@@ -1,4 +1,5 @@
 import Image from "next/image";
+import hoverStyles from "../ui/ButtonHover.module.css";
 import styles from "./Footer.module.css";
 
 export default function Footer() {
@@ -17,26 +18,26 @@ export default function Footer() {
 
         <div className={styles.actions} aria-label="Liens professionnels">
           <a
-            className={`${styles.action} ${styles.linkedinAction}`}
+            className={`${styles.action} ${styles.linkedinAction} ${hoverStyles.buttonHover}`}
             href="https://www.linkedin.com/in/miguel-angel-carretero-000b1747"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Profil LinkedIn de Miguel Carretero"
           >
-            in
+            <span className={hoverStyles.content}>in</span>
           </a>
-          <a className={`${styles.action} ${styles.cvAction}`} href="/miguel-carretero-cv.pdf" download>
-            CV
+          <a className={`${styles.action} ${styles.cvAction} ${hoverStyles.buttonHover}`} href="/miguel-carretero-cv.pdf" download>
+            <span className={hoverStyles.content}>CV</span>
           </a>
           <a
-            className={styles.action}
+            className={`${styles.action} ${hoverStyles.buttonHover}`}
             href="https://github.com/miguel-carretero"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Profil GitHub de Miguel Carretero"
           >
             <Image
-              className={styles.githubIcon}
+              className={`${styles.githubIcon} ${hoverStyles.content}`}
               src="/images/portfolio/github-icon.png"
               alt=""
               width={40}

@@ -1,4 +1,5 @@
 import PrimaryButton from "@/components/ui/PrimaryButton";
+import Reveal from "@/components/ui/Reveal";
 import SecondaryButton from "@/components/ui/SecondaryButton";
 import styles from "./AboutHero.module.css";
 
@@ -6,7 +7,7 @@ export default function AboutHero() {
   return (
     <section className={styles.hero} aria-labelledby="about-hero-title">
       <div className={styles.inner}>
-        <div className={styles.content}>
+        <Reveal className={styles.content}>
           <p className={styles.eyebrow}>À propos</p>
           <h1 id="about-hero-title" className={styles.title}>
             Une vision du design
@@ -30,14 +31,16 @@ export default function AboutHero() {
               Télécharger mon CV
             </PrimaryButton>
           </div>
-        </div>
+        </Reveal>
 
         <div
           className={styles.portrait}
           role="img"
           aria-label="Emplacement réservé au portrait de Miguel Carretero"
         >
-          <span aria-hidden="true">Portrait</span>
+          <Reveal className={styles.portraitReveal} variant="visual" delay={0.08}>
+            <span aria-hidden="true">Portrait</span>
+          </Reveal>
         </div>
       </div>
     </section>

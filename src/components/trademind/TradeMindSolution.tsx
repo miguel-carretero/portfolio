@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Reveal from "@/components/ui/Reveal";
 import styles from "./TradeMindSolution.module.css";
 
 export default function TradeMindSolution() {
@@ -6,14 +7,14 @@ export default function TradeMindSolution() {
     <section className={styles.section} aria-labelledby="trademind-solution-title">
       <div className={styles.inner}>
         <div className={styles.content}>
-          <div className={styles.intro}>
+          <Reveal className={styles.intro}>
             <p className={styles.eyebrow}>LA SOLUTION</p>
             <h2 id="trademind-solution-title" className={styles.title}>
               Comprendre l&apos;investissement au-delà des chiffres
             </h2>
-          </div>
+          </Reveal>
 
-          <div className={styles.copy}>
+          <Reveal className={styles.copy} delay={0.1}>
             <p>
               <strong>TradeMind</strong> analyse les données du portefeuille afin
               de révéler des indicateurs comportementaux compréhensibles et
@@ -23,11 +24,12 @@ export default function TradeMindSolution() {
               L&apos;application ne cherche pas à prédire les marchés, mais à aider
               l&apos;investisseur à mieux comprendre sa manière d&apos;investir.
             </p>
-          </div>
+          </Reveal>
         </div>
 
-        <div
+        <Reveal
           className={styles.visual}
+          variant="visual"
           role="img"
           aria-label="Écran de détail d’un actif TradeMind entouré de ses indicateurs"
         >
@@ -96,7 +98,7 @@ export default function TradeMindSolution() {
               unoptimized
             />
           </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

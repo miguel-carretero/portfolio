@@ -12,7 +12,7 @@
   margin: 0 auto;
 }
 
-.intro > div > div {
+.copy {
   margin-top: 30px;
 }
 
@@ -44,6 +44,20 @@
   background: var(--color-background);
   box-shadow: 0 0 20px rgb(0 0 0 / 9%);
   text-align: center;
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgb(0 0 0 / 12%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card {
+    transition: none;
+  }
 }
 
 .card h3 {
@@ -86,20 +100,19 @@
     margin-top: 40px;
   }
 
-  .intro,
-  .intro > div {
+  .intro {
     display: contents;
   }
 
-  .intro > div > p {
+  .intro > p {
     order: 1;
   }
 
-  .intro > div > h2 {
+  .intro > h2 {
     order: 2;
   }
 
-  .intro > div > div {
+  .copy {
     order: 4;
     margin-top: 32px;
   }
@@ -136,7 +149,7 @@
     margin-top: 40px;
   }
 
-  .intro > div > div {
+  .copy {
     margin-top: 32px;
   }
 

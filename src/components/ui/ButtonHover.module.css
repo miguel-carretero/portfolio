@@ -1,0 +1,44 @@
+.buttonHover {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  transition: color 500ms cubic-bezier(0.22, 1, 0.36, 1), transform 120ms ease;
+}
+
+.buttonHover::before {
+  position: absolute;
+  z-index: 0;
+  inset: -35%;
+  background: var(--button-hover-fill);
+  clip-path: polygon(0 0, 100% 0, 82% 100%, 0 100%);
+  content: "";
+  pointer-events: none;
+  transform: translate3d(-101%, -101%, 0);
+  transition: transform 500ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .buttonHover:hover {
+    color: var(--button-hover-color);
+  }
+
+  .buttonHover:hover::before {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.buttonHover:active {
+  transform: translateY(1px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .buttonHover,
+  .buttonHover::before {
+    transition: none;
+  }
+}

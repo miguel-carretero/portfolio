@@ -34,21 +34,21 @@
     max-width: none;
   }
 
-  .intro,
-  .intro > div {
+  .intro {
     display: contents;
   }
 
-  .intro > div > p {
+  .intro > p {
     order: 1;
   }
 
-  .intro > div > h2 {
+  .intro > h2 {
     order: 2;
   }
 
-  .intro > div > div {
+  .copy {
     order: 4;
+    margin-top: 32px;
   }
 
   .graph {

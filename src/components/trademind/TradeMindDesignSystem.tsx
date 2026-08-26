@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Reveal from "@/components/ui/Reveal";
 import styles from "./TradeMindDesignSystem.module.css";
 
 export default function TradeMindDesignSystem() {
@@ -6,14 +7,14 @@ export default function TradeMindDesignSystem() {
     <section className={styles.section} aria-labelledby="design-system-title">
       <div className={styles.inner}>
         <div className={styles.content}>
-          <div className={styles.intro}>
+          <Reveal className={styles.intro}>
             <p className={styles.eyebrow}>DESIGN SYSTEM</p>
             <h2 id="design-system-title" className={styles.title}>
               Les fondations du produit
             </h2>
-          </div>
+          </Reveal>
 
-          <div className={styles.visual}>
+          <Reveal className={styles.visual} variant="visual" delay={0.08}>
             <Image
               src="/images/portfolio/design-sytem.png"
               alt="Aperçu du Design System de TradeMind"
@@ -22,9 +23,9 @@ export default function TradeMindDesignSystem() {
               sizes="(max-width: 1000px) min(100vw - 40px, 546px), min(42vw, 546px)"
               unoptimized
             />
-          </div>
+          </Reveal>
 
-          <div className={styles.copy}>
+          <Reveal className={styles.copy} delay={0.12}>
             <p>
               Le Design System constitue la base commune qui garantit la
               cohérence de l&apos;expérience.
@@ -39,7 +40,7 @@ export default function TradeMindDesignSystem() {
               <li>Scalabilité</li>
               <li>Collaboration</li>
             </ul>
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>

@@ -1,11 +1,12 @@
 import Image from "next/image";
+import Reveal from "@/components/ui/Reveal";
 import styles from "./TradeMindProductVision.module.css";
 
 export default function TradeMindProductVision() {
   return (
     <section className={styles.section} aria-labelledby="product-vision-title">
       <div className={styles.inner}>
-        <div className={styles.visual} aria-label="Aperçus de l’interface TradeMind">
+        <Reveal className={styles.visual} variant="visual" aria-label="Aperçus de l’interface TradeMind">
           <div className={`${styles.card} ${styles.scoreCard}`}>
             <Image
               src="/images/trademind/Behaviour Score.png"
@@ -33,17 +34,17 @@ export default function TradeMindProductVision() {
               unoptimized
             />
           </div>
-        </div>
+        </Reveal>
 
         <div className={styles.content}>
-          <div className={styles.intro}>
+          <Reveal className={styles.intro}>
             <p className={styles.eyebrow}>VISION PRODUIT</p>
             <h2 id="product-vision-title" className={styles.title}>
               Une approche comportementale de l&apos;investissement.
             </h2>
-          </div>
+          </Reveal>
 
-          <div className={styles.copy}>
+          <Reveal className={styles.copy} delay={0.1}>
             <p>
               La plupart des applications d&apos;investissement utilisent les
               comportements comme une fonctionnalité supplémentaire.
@@ -56,7 +57,7 @@ export default function TradeMindProductVision() {
               comprendre les habitudes, les biais et les mécanismes de décision
               de l&apos;investisseur.
             </p>
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>

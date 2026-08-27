@@ -10,6 +10,9 @@ export default function Footer() {
           <div className={styles.identityText}>
             <p className={styles.name}>Miguel Angel Carretero</p>
             <p className={styles.role}>UI &amp; Product Designer</p>
+            <a className={styles.email} href="mailto:ma-design@outlook.fr">
+              ma-design@outlook.fr
+            </a>
           </div>
           <p className={styles.copyright}>© 2026</p>
         </div>

@@ -65,8 +65,8 @@ export default function HomeHero() {
           viewport={{ once: true, amount: 0.3 }}
           transition={{ ...revealTransition, delay: 0.22 }}
         >
-          J&apos;aide les équipes à concevoir des produits numériques en combinant expérience métier,
-          culture design et pratique Front-End.
+          J&apos;accompagne les équipes dans la conception de produits numériques en combinant expérience
+          métier, culture design et pratique Front-End.
         </motion.p>
         <motion.blockquote
           className={styles.experience}
@@ -75,7 +75,7 @@ export default function HomeHero() {
           viewport={{ once: true, amount: 0.3 }}
           transition={{ ...revealTransition, delay: 0.32 }}
         >
-          Près de 20 ans d&apos;expérience professionnelle nourrissent aujourd&apos;hui ma vision du design.
+          20 ans d&apos;expérience professionnelle nourrissent aujourd&apos;hui ma vision du design.
         </motion.blockquote>
         <motion.div
           className={styles.actions}

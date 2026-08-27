@@ -45,7 +45,7 @@ export default function AboutExperience() {
       >
         <h2 id="about-experience-title">Une expérience construite sur le terrain</h2>
         <p>
-          <strong>Depuis près de 20 ans,</strong> j&apos;évolue dans l&apos;univers du numérique à
+          <strong>Depuis 20 ans,</strong> j&apos;évolue dans l&apos;univers du numérique à
           travers des contextes, des projets et des responsabilités variés.
         </p>
         <p>
@@ -60,8 +60,8 @@ export default function AboutExperience() {
           sont intimement liés.
         </p>
         <p>
-          Aujourd&apos;hui, cette expérience nourrit ma manière d&apos;aborder les sujets avec davantage
-          de recul, de <strong>pragmatisme</strong> et de confiance.
+          Aujourd’hui, cette expérience nourrit ma manière d’aborder les sujets avec une vision plus globale,
+          du pragmatisme et de la confiance.
         </p>
       </motion.div>
 

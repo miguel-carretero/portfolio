@@ -24,7 +24,7 @@ const pillars: Pillar[] = [
   },
   {
     icon: "Brainstorm Skill.svg",
-    title: "Transformer la complexité en solution claires",
+    title: "Transformer la complexité en solutions claires",
     image: "transform-complexity.png",
     alt: "Illustration de la simplification d’un parcours complexe",
     description:

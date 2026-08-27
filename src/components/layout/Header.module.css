@@ -1,16 +1,80 @@
 .header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
   width: min(1360px, calc(100% - 80px));
+  height: 87px;
   min-height: 58px;
   margin-inline: auto;
-  padding-top: 15px;
+  padding: 15px 0 0;
+  isolation: isolate;
+  transition: padding 240ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.header::before {
+  position: absolute;
+  z-index: -1;
+  inset: 0 calc((100% - 100vw) / 2);
+  border-bottom: 1px solid rgb(25 25 25 / 7%);
+  background: rgb(255 255 255 / 92%);
+  backdrop-filter: blur(12px);
+  content: "";
+  opacity: 0;
+  pointer-events: none;
+  transition: bottom 240ms cubic-bezier(0.22, 1, 0.36, 1), opacity 240ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.scrolled::before {
+  opacity: 1;
+}
+
+.scrolled .fullLogo {
+  opacity: 0;
+}
+
+.scrolled .monogramLogo {
+  opacity: 1;
 }
 
 .logo {
   display: inline-flex;
+  margin-left: 8px;
   width: fit-content;
+}
+
+.logoVisual {
+  position: relative;
+  display: block;
+  width: 128px;
+  height: 72px;
+}
+
+.fullLogo,
+.monogramLogo {
+  display: block;
+  transition: opacity 200ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.monogramLogo {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  opacity: 0;
+  transform: translateY(-50%);
+}
+
+@media (min-width: 760px) {
+  .scrolled {
+    padding: 0 0 10px;
+  }
+
+  .scrolled::before {
+    bottom: 10px;
+  }
+
 }
 
 .navigation {
@@ -18,6 +82,10 @@
   align-items: center;
   gap: 32px;
   justify-self: center;
+}
+
+.mobileLabel {
+  display: none;
 }
 
 .navigationLink {
@@ -67,6 +135,8 @@
   color: var(--color-accent);
   font-size: 16px;
   line-height: 1;
+  transition: color 500ms cubic-bezier(0.22, 1, 0.36, 1), transform 120ms ease,
+    padding 240ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .downloadIcon {
@@ -97,7 +167,6 @@
   opacity: 1;
 }
 
-.mobileCvLink,
 .menuButton {
   display: none;
 }
@@ -105,7 +174,6 @@
 .logo:focus-visible,
 .navigationLink:focus-visible,
 .cvLink:focus-visible,
-.mobileCvLink:focus-visible,
 .menuButton:focus-visible {
   outline: 2px solid var(--color-accent);
   outline-offset: 4px;
@@ -114,59 +182,168 @@
 @media (max-width: 759px) {
   .header {
     grid-template-columns: 1fr auto;
-    row-gap: 16px;
+  }
+
+  .scrolled {
+    padding-top: 5px;
   }
 
   .navigation {
-    display: none;
-    grid-row: 2;
-    grid-column: 1 / -1;
-    align-items: flex-start;
-    gap: 20px;
-    justify-self: stretch;
-    padding: 20px;
-    border: 1px solid var(--color-accent-soft);
-    border-radius: 10px;
-    background: var(--color-background);
+    position: fixed;
+    z-index: 0;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100dvh;
+    padding: 0 32px;
+    background: rgb(255 255 255 / 90%);
+    backdrop-filter: blur(3px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 260ms cubic-bezier(0.22, 1, 0.36, 1), visibility 0s linear 260ms;
+    visibility: hidden;
   }
 
   .navigationOpen {
-    display: flex;
-    flex-direction: column;
+    opacity: 1;
+    pointer-events: auto;
+    transition-delay: 0s;
+    visibility: visible;
   }
 
   .cvLink {
     display: none;
   }
 
-  .mobileCvLink {
+  .logo {
+    position: relative;
+    z-index: 1;
+  }
+
+  .desktopLabel {
+    display: none;
+  }
+
+  .mobileLabel {
+    display: block;
+  }
+
+  .navigationLink {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    color: var(--color-accent);
+    min-height: 48px;
+    color: var(--color-text-primary);
+    font-size: clamp(24px, 6vw, 30px);
+    font-weight: var(--font-weight-semibold);
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: color 160ms ease, opacity 320ms cubic-bezier(0.22, 1, 0.36, 1),
+      transform 320ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .navigationOpen .navigationLink {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .navigationOpen .navigationLink:nth-child(1) {
+    transition-delay: 90ms;
+  }
+
+  .navigationOpen .navigationLink:nth-child(2) {
+    transition-delay: 160ms;
+  }
+
+  .navigationOpen .navigationLink:nth-child(3) {
+    transition-delay: 230ms;
+  }
+
+  .navigationLink::after {
+    top: 50%;
+    bottom: auto;
+    left: -18px;
+    width: 4px;
+    height: 28px;
+    transform: translateY(-50%) scaleY(0.6);
+  }
+
+  .active::after {
+    transform: translateY(-50%) scaleY(1);
   }
 
   .menuButton {
-    display: flex;
+    position: relative;
+    z-index: 1;
+    display: block;
     grid-column: 2;
-    align-items: center;
-    justify-content: center;
     width: 42px;
     height: 42px;
-    gap: 5px;
     border: 1px solid var(--color-accent);
     border-radius: 10px;
     background: transparent;
     color: var(--color-accent);
     cursor: pointer;
-    flex-direction: column;
   }
 
   .menuButton span {
-    display: block;
-    width: 18px;
+    position: absolute;
+    left: 50%;
     height: 2px;
     background: currentColor;
+    translate: -50% 0;
+    rotate: 0deg;
+    scale: 1 1;
+    transform-origin: center;
+    transition: width 260ms cubic-bezier(0.22, 1, 0.36, 1),
+      translate 300ms cubic-bezier(0.22, 1, 0.36, 1),
+      rotate 260ms cubic-bezier(0.22, 1, 0.36, 1), scale 200ms ease, opacity 160ms ease;
+  }
+
+  .menuButton span:nth-child(1) {
+    top: 12px;
+    width: 18px;
+  }
+
+  .menuButton span:nth-child(2) {
+    top: 20px;
+    width: 24px;
+  }
+
+  .menuButton span:nth-child(3) {
+    top: 28px;
+    width: 14px;
+  }
+
+  .menuButton[aria-expanded="true"] span:nth-child(1) {
+    width: 22px;
+    translate: -50% 8px;
+    rotate: 45deg;
+    transition-delay: 0s, 70ms, 220ms, 0s, 0s;
+  }
+
+  .menuButton[aria-expanded="true"] span:nth-child(2) {
+    scale: 0.2 1;
+    opacity: 0;
+    transition-delay: 0s, 0s, 0s, 120ms, 170ms;
+  }
+
+  .menuButton[aria-expanded="true"] span:nth-child(3) {
+    width: 22px;
+    translate: -50% -8px;
+    rotate: -45deg;
+    transition-delay: 0s, 70ms, 220ms, 0s, 0s;
+  }
+
+  .menuButton[aria-expanded="false"] span:nth-child(1),
+  .menuButton[aria-expanded="false"] span:nth-child(3) {
+    transition-delay: 220ms, 70ms, 0s, 0s, 0s;
   }
 }
 
@@ -177,14 +354,29 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .header,
+  .header::before,
+  .fullLogo,
+  .monogramLogo,
+  .cvLink,
   .navigationLink,
   .navigationLink::after,
-  .mobileCvLink {
+  .menuButton span {
     transition: none;
   }
 
   .downloadIconGreen,
   .downloadIconWhite {
     transition: none;
+  }
+
+  @media (max-width: 759px) {
+    .navigation {
+      transition: none;
+    }
+
+    .navigationLink {
+      transition: none;
+    }
   }
 }

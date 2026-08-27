@@ -48,7 +48,7 @@ export default function NourishingApproach() {
             </p>
           </motion.div>
           <div className={styles.action}>
-            <SecondaryButton href="/about">Découvrir mon parcours</SecondaryButton>
+            <SecondaryButton href="/about">Découvrir mon expérience</SecondaryButton>
           </div>
         </div>
 
@@ -63,34 +63,25 @@ export default function NourishingApproach() {
       </div>
 
       <div className={styles.cards}>
-        <motion.article
-          className={styles.card}
-          initial={shouldReduceMotion ? false : { opacity: 0, y: 16 }}
-          whileInView={shouldReduceMotion ? undefined : { opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.42, ease: [0.22, 1, 0.36, 1] }}
-        >
-          <h3>Comprendre les métiers</h3>
-          <p>
-            Travailler au contact de différents acteurs m&apos;a appris à traduire
-            des problématiques métier en solutions compréhensibles et
-            exploitables.
-          </p>
-        </motion.article>
+        <Reveal className={styles.cardReveal}>
+          <article className={styles.card}>
+            <h3>Comprendre les métiers</h3>
+            <p>
+              Travailler au contact de différents acteurs m&apos;a appris à comprendre leurs enjeux métier et
+              à les traduire en solutions compréhensibles et exploitables.
+            </p>
+          </article>
+        </Reveal>
 
-        <motion.article
-          className={styles.card}
-          initial={shouldReduceMotion ? false : { opacity: 0, y: 16 }}
-          whileInView={shouldReduceMotion ? undefined : { opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.42, delay: 0.07, ease: [0.22, 1, 0.36, 1] }}
-        >
-          <h3>Une vision globale du produit</h3>
-          <p>
-            J&apos;aborde les projets en prenant en compte l&apos;ensemble de leur
-            écosystème : <strong>utilisateurs, métier, produit, technique et contraintes de mise en œuvre.</strong>
-          </p>
-        </motion.article>
+        <Reveal className={styles.cardReveal} delay={0.07}>
+          <article className={styles.card}>
+            <h3>Une vision globale du produit</h3>
+            <p>
+              J&apos;aborde les projets en prenant en compte l&apos;ensemble de leur
+              écosystème : <strong>utilisateurs, métier, produit, technique et contraintes de mise en œuvre.</strong>
+            </p>
+          </article>
+        </Reveal>
       </div>
     </section>
   );

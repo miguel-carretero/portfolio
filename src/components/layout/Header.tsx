@@ -3,30 +3,76 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import hoverStyles from "../ui/ButtonHover.module.css";
 import styles from "./Header.module.css";
 
 const navigationItems = [
-  { href: "/", label: "Home" },
-  { href: "/trademind", label: "TradeMind" },
-  { href: "/about", label: "About" },
+  { href: "/", label: "Home", mobileLabel: "Home" },
+  { href: "/trademind", label: "TradeMind", mobileLabel: "TradeMind" },
+  { href: "/about", label: "About", mobileLabel: "À propos" },
 ];
 
 export default function Header() {
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
+  const firstMenuLinkRef = useRef<HTMLAnchorElement>(null);
+
+  useEffect(() => {
+    const updateScrolledState = () => {
+      setIsScrolled(window.scrollY > 32);
+    };
+
+    updateScrolledState();
+    window.addEventListener("scroll", updateScrolledState, { passive: true });
+
+    return () => window.removeEventListener("scroll", updateScrolledState);
+  }, []);
+
+  useEffect(() => {
+    if (!isMenuOpen) {
+      return;
+    }
+
+    const previousOverflow = document.body.style.overflow;
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setIsMenuOpen(false);
+        menuButtonRef.current?.focus();
+      }
+    };
+
+    document.body.style.overflow = "hidden";
+    document.addEventListener("keydown", handleKeyDown);
+    firstMenuLinkRef.current?.focus();
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [isMenuOpen]);
 
   return (
-    <header className={styles.header}>
+    <header className={`${styles.header} ${isScrolled ? styles.scrolled : ""}`}>
       <Link className={styles.logo} href="/" aria-label="Accueil Miguel Carretero">
-        <Image
-          src="/images/portfolio/mac-logo.svg"
-          alt="Miguel Carretero"
-          width={128}
-          height={72}
-          priority
-        />
+        <span className={styles.logoVisual}>
+          <Image
+            className={styles.fullLogo}
+            src="/images/portfolio/mac-logo.svg"
+            alt="Miguel Carretero"
+            width={128}
+            height={72}
+            priority
+          />
+          <img
+            className={styles.monogramLogo}
+            src="/images/portfolio/MAC 2.svg"
+            alt=""
+            aria-hidden="true"
+          />
+        </span>
       </Link>
 
       <nav
@@ -34,7 +80,7 @@ export default function Header() {
         className={`${styles.navigation} ${isMenuOpen ? styles.navigationOpen : ""}`}
         aria-label="Navigation principale"
       >
-        {navigationItems.map((item) => {
+        {navigationItems.map((item, index) => {
           const isActive = pathname === item.href;
 
           return (
@@ -44,26 +90,13 @@ export default function Header() {
               href={item.href}
               aria-current={isActive ? "page" : undefined}
               onClick={() => setIsMenuOpen(false)}
+              ref={index === 0 ? firstMenuLinkRef : undefined}
             >
-              {item.label}
+              <span className={styles.desktopLabel}>{item.label}</span>
+              <span className={styles.mobileLabel}>{item.mobileLabel}</span>
             </Link>
           );
         })}
-        <a
-          className={styles.mobileCvLink}
-          href="/miguel-carretero-cv.pdf"
-          download
-          onClick={() => setIsMenuOpen(false)}
-        >
-          Télécharger mon CV
-          <Image
-            src="/images/portfolio/download-icon.png"
-            alt=""
-            width={18}
-            height={18}
-            aria-hidden="true"
-          />
-        </a>
       </nav>
 
       <a className={`${styles.cvLink} ${hoverStyles.buttonHover}`} href="/miguel-carretero-cv.pdf" download>
@@ -91,6 +124,7 @@ export default function Header() {
       <button
         className={styles.menuButton}
         type="button"
+        ref={menuButtonRef}
         aria-label={isMenuOpen ? "Fermer le menu de navigation" : "Ouvrir le menu de navigation"}
         aria-controls="mobile-navigation"
         aria-expanded={isMenuOpen}

@@ -12,8 +12,9 @@ export default function ClosingCta() {
           Construisons la suite
         </h2>
         <p className={styles.description}>
-          Si ma démarche, mon parcours ou ma façon de concevoir les produits
-          résonnent avec vos enjeux, je serais ravi d&apos;échanger avec vous.
+          Si ma démarche, mon parcours ou ma vision du produit résonnent avec vos enjeux,
+          <br />
+          je serais ravi d&apos;échanger avec vous.
         </p>
         <a className={styles.email} href="mailto:ma-design@outlook.fr">
           ma-design@outlook.fr

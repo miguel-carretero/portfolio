@@ -43,7 +43,8 @@ export default function ProjectExplorations() {
             </div>
           </div>
           <p className={styles.cardText}>
-            Identifier un problème, définir une vision produit et concevoir une solution cohérente.
+            Croiser besoins utilisateurs, contraintes métier et objectifs du produit pour faire émerger
+            une direction claire avant de passer à la conception.
           </p>
           </ExplorationCard>
         </Reveal>

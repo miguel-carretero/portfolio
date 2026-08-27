@@ -28,7 +28,7 @@ export default function TradeMindHero() {
           </h1>
           <p className={styles.description}>
             TradeMind est un compagnon comportemental conçu pour aider les
-            investisseurs à prendre du recul sur leurs décisions et à développer
+            investisseurs à mieux comprendre leurs décisions et à développer
             de meilleures habitudes d&apos;investissement.
           </p>
           <blockquote className={styles.quote}>

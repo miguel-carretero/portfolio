@@ -10,7 +10,7 @@ export default function AboutToday() {
         <h2 id="about-today-title">Aujourd&apos;hui</h2>
         <div className={styles.copy}>
           <p>
-            Je souhaite mettre cette expérience au service de projets qui placent{" "}
+            Je souhaite mettre mes expériences au service de projets qui placent{" "}
             <strong>la compréhension des besoins, la collaboration et la recherche de solutions</strong>{" "}
             au cœur de leur démarche. J&apos;aime concevoir des produits qui relient{" "}
             <strong>vision, expérience utilisateur et réalité technique</strong>, avec une approche{" "}
@@ -18,7 +18,7 @@ export default function AboutToday() {
           </p>
           <p>
             Curieux de nature, je continue à <strong>apprendre</strong>, à <strong>explorer</strong>{" "}
-            de nouveaux outils et à faire évoluer ma pratique.
+            de nouveaux outils et à faire <strong>évoluer</strong> ma pratique.
           </p>
         </div>
         <div className={styles.actions}>

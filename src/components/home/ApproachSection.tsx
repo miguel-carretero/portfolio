@@ -27,8 +27,8 @@ export default function ApproachSection() {
               design, métier et technique.
             </p>
             <p>
-              Cette manière de travailler guide aujourd&apos;hui chacune de mes
-              décisions de conception.
+              Cette approche me permet de construire des solutions plus cohérentes, plus pertinentes et
+              mieux alignées avec les besoins réels.
             </p>
           </SectionIntro>
         </div>

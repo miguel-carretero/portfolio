@@ -32,6 +32,18 @@
   line-height: 1.3;
 }
 
+.email {
+  margin-top: 4px;
+  color: rgb(255 255 255 / 80%);
+  font-size: 14px;
+  line-height: 1.3;
+  text-decoration: none;
+}
+
+.email:hover {
+  text-decoration: underline;
+}
+
 .copyright {
   margin-top: 4px;
   font-size: 14px;
@@ -69,6 +81,11 @@
 }
 
 .action:focus-visible {
+  outline: 2px solid var(--color-background);
+  outline-offset: 4px;
+}
+
+.email:focus-visible {
   outline: 2px solid var(--color-background);
   outline-offset: 4px;
 }

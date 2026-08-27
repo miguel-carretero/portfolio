@@ -36,8 +36,8 @@ export default function AboutEvolution() {
             pratique.
           </p>
           <p>
-            Cette évolution m&apos;a naturellement conduit vers{" "}
-            <strong>une approche plus produit du design</strong>, dans laquelle{" "}
+            Cette évolution m&apos;a naturellement conduit vers une{" "}
+            <strong>approche du design davantage centrée sur le produit</strong>, dans laquelle{" "}
             <strong>l&apos;interface n&apos;est qu&apos;une partie d&apos;un ensemble plus large.</strong>
           </p>
         </Reveal>

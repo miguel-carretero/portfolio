@@ -6,6 +6,7 @@ import TradeMindLearnings from "@/components/trademind/TradeMindLearnings";
 import TradeMindProductVision from "@/components/trademind/TradeMindProductVision";
 import TradeMindSolution from "@/components/trademind/TradeMindSolution";
 import TradeMindWhy from "@/components/trademind/TradeMindWhy";
+import styles from "./TradeMindCredit.module.css";
 
 export default function TradeMindPage() {
   return (
@@ -18,6 +19,9 @@ export default function TradeMindPage() {
       <TradeMindExperience />
       <TradeMindDesignSystem />
       <TradeMindLearnings />
+      <p className={styles.credit}>
+        TradeMind est un concept personnel imaginé et conçu par Miguel Angel Carretero — 2026.
+      </p>
     </main>
   );
 }

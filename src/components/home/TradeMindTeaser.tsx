@@ -132,8 +132,8 @@ export default function TradeMindTeaser() {
       <Reveal className={styles.content} delay={0.12}>
         <h3>Comprendre l&apos;investisseur derrière le portefeuille.</h3>
         <p>
-          TradeMind est un compagnon comportemental conçu pour aider les investisseurs à prendre du
-          recul sur leurs décisions et à développer de meilleures habitudes d&apos;investissement.
+          TradeMind est un compagnon comportemental conçu pour aider les investisseurs à mieux
+          comprendre leurs décisions et à développer de meilleures habitudes d&apos;investissement.
         </p>
       </Reveal>
     </section>

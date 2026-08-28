@@ -27,7 +27,7 @@ export default function AboutHero() {
             >
               Linkedin
             </SecondaryButton>
-            <PrimaryButton href="/miguel-carretero-cv.pdf" download>
+            <PrimaryButton href="/miguel-carretero-cv.pdf">
               Télécharger mon CV
             </PrimaryButton>
           </div>

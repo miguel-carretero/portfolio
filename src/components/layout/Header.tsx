@@ -66,11 +66,14 @@ export default function Header() {
             height={72}
             priority
           />
-          <img
+          <Image
             className={styles.monogramLogo}
             src="/images/portfolio/MAC 2.svg"
             alt=""
+            width={118}
+            height={38}
             aria-hidden="true"
+            unoptimized
           />
         </span>
       </Link>

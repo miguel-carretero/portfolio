@@ -5,13 +5,12 @@ import styles from "./PrimaryButton.module.css";
 
 type PrimaryButtonProps = {
   children: ReactNode;
-  download?: boolean;
   href: string;
 };
 
-export default function PrimaryButton({ children, download, href }: PrimaryButtonProps) {
+export default function PrimaryButton({ children, href }: PrimaryButtonProps) {
   return (
-    <a className={`${styles.button} ${hoverStyles.buttonHover}`} href={href} download={download}>
+    <a className={`${styles.button} ${hoverStyles.buttonHover}`} href={href} download>
       <span className={hoverStyles.content}>{children}</span>
       <Image
         className={hoverStyles.content}

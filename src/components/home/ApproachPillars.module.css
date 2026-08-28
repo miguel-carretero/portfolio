@@ -19,24 +19,6 @@
   margin: 48px auto 0;
 }
 
-.cardReveal > article {
-  height: 100%;
-  transition: transform 160ms ease, box-shadow 160ms ease;
-}
-
-@media (hover: hover) and (pointer: fine) {
-  .cardReveal > article:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 24px rgb(0 0 0 / 12%);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .cardReveal > article {
-    transition: none;
-  }
-}
-
 .card {
   min-height: 425px;
   padding: 20px;

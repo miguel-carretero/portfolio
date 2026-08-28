@@ -40,15 +40,7 @@ export default function TradeMindHero() {
         </motion.div>
 
         <div className={styles.cards} aria-label="Aperçus de l’interface TradeMind">
-          <Image
-            className={styles.shadow}
-            src="/images/trademind/trademind-hero-shadow.svg"
-            alt=""
-            width={699}
-            height={76}
-            aria-hidden="true"
-            unoptimized
-          />
+          <span className={styles.shadow} aria-hidden="true" />
           <Image
             className={styles.glow}
             src="/images/trademind/trademind-hero-glow.svg"
@@ -69,6 +61,7 @@ export default function TradeMindHero() {
               alt="Aperçu du score comportemental TradeMind"
               width={1042}
               height={745}
+              preload
               unoptimized
             />
           </motion.div>

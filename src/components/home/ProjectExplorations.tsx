@@ -1,4 +1,5 @@
 import Image from "next/image";
+import cardHoverStyles from "@/components/ui/CardHover.module.css";
 import ExplorationCard from "@/components/ui/ExplorationCard";
 import Reveal from "@/components/ui/Reveal";
 import SectionIntro from "@/components/ui/SectionIntro";
@@ -11,17 +12,16 @@ export default function ProjectExplorations() {
   return (
     <section className={styles.section} aria-label="Ce que ce projet m’a permis d’explorer">
       <Reveal className={styles.intro}>
-        <SectionIntro
-          eyebrow=""
-          title="Ce que ce projet m’a permis d’explorer"
-        >
-          {null}
-        </SectionIntro>
+        <SectionIntro title="Ce que ce projet m’a permis d’explorer" />
       </Reveal>
 
       <div className={styles.cards}>
-        <Reveal className={styles.cardReveal}>
-          <ExplorationCard icon={`${portfolioPath}Brain.svg`} title="Product Thinking">
+        <Reveal>
+          <ExplorationCard
+            className={cardHoverStyles.cardHover}
+            icon={`${portfolioPath}Brain.svg`}
+            title="Product Thinking"
+          >
           <div className={styles.thinkingVisual}>
             <div className={styles.thinkingStep}>
               <Image src={`${portfolioPath}Search.svg`} alt="" width={36} height={36} />
@@ -49,8 +49,12 @@ export default function ProjectExplorations() {
           </ExplorationCard>
         </Reveal>
 
-        <Reveal className={styles.cardReveal} delay={0.07}>
-          <ExplorationCard icon={`${portfolioPath}Figma.svg`} title="Design System">
+        <Reveal delay={0.07}>
+          <ExplorationCard
+            className={cardHoverStyles.cardHover}
+            icon={`${portfolioPath}Figma.svg`}
+            title="Design System"
+          >
           <div className={styles.designSystemVisual}>
             <div className={styles.colorRow}>
               <p className={styles.visualLabel}>Couleurs</p>
@@ -88,8 +92,12 @@ export default function ProjectExplorations() {
           </ExplorationCard>
         </Reveal>
 
-        <Reveal className={styles.cardReveal} delay={0.14}>
-          <ExplorationCard icon={`${portfolioPath}Source Code.svg`} title="Design & Front-End">
+        <Reveal delay={0.14}>
+          <ExplorationCard
+            className={cardHoverStyles.cardHover}
+            icon={`${portfolioPath}Source Code.svg`}
+            title="Design & Front-End"
+          >
           <div className={styles.frontEndVisual}>
             <div className={styles.figmaPanel}>
               <span className={styles.panelLabel}>Composant Figma</span>

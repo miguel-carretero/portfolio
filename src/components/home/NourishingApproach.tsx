@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion, useReducedMotion } from "motion/react";
+import cardHoverStyles from "@/components/ui/CardHover.module.css";
 import sectionIntroStyles from "@/components/ui/SectionIntro.module.css";
 import Reveal from "@/components/ui/Reveal";
 import SecondaryButton from "@/components/ui/SecondaryButton";
@@ -63,8 +64,8 @@ export default function NourishingApproach() {
       </div>
 
       <div className={styles.cards}>
-        <Reveal className={styles.cardReveal}>
-          <article className={styles.card}>
+        <Reveal>
+          <article className={`${styles.card} ${cardHoverStyles.cardHover}`}>
             <h3>Comprendre les métiers</h3>
             <p>
               Travailler au contact de différents acteurs m&apos;a appris à comprendre leurs enjeux métier et
@@ -73,8 +74,8 @@ export default function NourishingApproach() {
           </article>
         </Reveal>
 
-        <Reveal className={styles.cardReveal} delay={0.07}>
-          <article className={styles.card}>
+        <Reveal delay={0.07}>
+          <article className={`${styles.card} ${cardHoverStyles.cardHover}`}>
             <h3>Une vision globale du produit</h3>
             <p>
               J&apos;aborde les projets en prenant en compte l&apos;ensemble de leur

@@ -108,7 +108,8 @@
   bottom: -7%;
   left: 0;
   width: 100%;
-  height: auto;
+  aspect-ratio: 699 / 76;
+  background: url("/images/trademind/trademind-hero-shadow.svg") center / 100% 100% no-repeat;
   pointer-events: none;
 }
 
@@ -239,7 +240,7 @@
   }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 759px) {
   .hero {
     padding: 96px 20px 104px;
   }

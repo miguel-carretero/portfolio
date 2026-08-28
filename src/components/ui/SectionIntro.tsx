@@ -2,9 +2,9 @@ import type { ReactNode } from "react";
 import styles from "./SectionIntro.module.css";
 
 type SectionIntroProps = {
-  eyebrow: string;
+  eyebrow?: string;
   title: string;
-  children: ReactNode;
+  children?: ReactNode;
 };
 
 export default function SectionIntro({

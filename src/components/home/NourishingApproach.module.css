@@ -38,24 +38,6 @@
   margin: 100px auto 0;
 }
 
-.cardReveal > .card {
-  height: 100%;
-  transition: transform 160ms ease, box-shadow 160ms ease;
-}
-
-@media (hover: hover) and (pointer: fine) {
-  .cardReveal > .card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 24px rgb(0 0 0 / 12%);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .cardReveal > .card {
-    transition: none;
-  }
-}
-
 .card {
   padding: 30px 31px;
   border-radius: 12px;

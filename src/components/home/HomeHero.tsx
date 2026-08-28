@@ -85,7 +85,7 @@ export default function HomeHero() {
           transition={{ ...revealTransition, delay: 0.42 }}
         >
           <SecondaryButton href="/trademind">Découvrir TradeMind</SecondaryButton>
-          <PrimaryButton href="/miguel-carretero-cv.pdf" download>
+          <PrimaryButton href="/miguel-carretero-cv.pdf">
             Télécharger mon CV
           </PrimaryButton>
         </motion.div>

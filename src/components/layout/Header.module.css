@@ -112,7 +112,7 @@
 
 .navigationLink:hover,
 .active {
-  color: var(--color-accent);
+  color: var(--color-accent-strong);
 }
 
 .active::after {
@@ -121,7 +121,7 @@
 }
 
 .cvLink {
-  --button-hover-fill: var(--color-accent);
+  --button-hover-fill: var(--color-accent-strong);
   --button-hover-color: var(--color-background);
 
   display: inline-flex;
@@ -132,7 +132,7 @@
   padding: 12px 18px;
   border: 1px solid var(--color-accent);
   border-radius: 10px;
-  color: var(--color-accent);
+  color: var(--color-accent-strong);
   font-size: 16px;
   line-height: 1;
   transition: color 500ms cubic-bezier(0.22, 1, 0.36, 1), transform 120ms ease,

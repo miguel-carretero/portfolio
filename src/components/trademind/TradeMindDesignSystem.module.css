@@ -24,7 +24,7 @@
 }
 
 .eyebrow {
-  color: var(--color-accent);
+  color: var(--color-accent-strong);
   font-size: var(--font-size-eyebrow);
   font-weight: var(--font-weight-light);
   line-height: var(--line-height-body);
@@ -63,7 +63,7 @@
 }
 
 .highlight {
-  color: var(--color-accent);
+  color: var(--color-accent-strong);
   font-weight: var(--font-weight-bold);
 }
 

@@ -2,6 +2,7 @@
   --color-text-primary: #191919;
   --color-text-secondary: #62666c;
   --color-accent: #6c8678;
+  --color-accent-strong: #5f786a;
   --color-accent-soft: #c8d6ce;
   --color-background: #ffffff;
 
@@ -59,4 +60,29 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+.skipLink {
+  position: fixed;
+  z-index: 200;
+  top: 16px;
+  left: 16px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  color: var(--color-background);
+  background: var(--color-text-primary);
+  font-size: var(--font-size-control);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-control);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-140%);
+}
+
+.skipLink:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
 }

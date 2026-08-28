@@ -18,6 +18,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="fr" className={geist.variable}>
       <body>
+        <a className="skipLink" href="#main-content">
+          Aller au contenu principal
+        </a>
         <Header />
         {children}
         <Footer />

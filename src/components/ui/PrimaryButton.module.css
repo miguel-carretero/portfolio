@@ -8,7 +8,7 @@
   gap: 8px;
   padding: 12px 18px;
   border-radius: 10px;
-  background: linear-gradient(90deg, var(--color-accent), #547061);
+  background: linear-gradient(90deg, var(--color-accent-strong), #547061);
   color: var(--color-background);
   font-size: var(--font-size-control);
   font-weight: var(--font-weight-medium);

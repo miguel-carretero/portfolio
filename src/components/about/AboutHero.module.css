@@ -21,7 +21,7 @@
 }
 
 .eyebrow {
-  color: var(--color-accent);
+  color: var(--color-accent-strong);
   font-size: var(--font-size-eyebrow);
   font-weight: var(--font-weight-semibold);
   line-height: var(--line-height-body);

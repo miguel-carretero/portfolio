@@ -26,7 +26,7 @@
 }
 
 .eyebrow span {
-  color: var(--color-accent);
+  color: var(--color-accent-strong);
   font-weight: var(--font-weight-bold);
 }
 
@@ -58,7 +58,7 @@
       calc(100% - 2px) no-repeat,
     linear-gradient(var(--color-accent-soft), var(--color-accent-soft)) 8px center / 5px
       calc(100% - 2px) no-repeat;
-  color: var(--color-accent);
+  color: var(--color-accent-strong);
   font-size: 16px;
   font-style: italic;
   font-weight: var(--font-weight-semibold);

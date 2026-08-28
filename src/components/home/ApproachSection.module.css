@@ -112,7 +112,7 @@
   aspect-ratio: 1;
   padding-top: 35px;
   color: var(--color-background);
-  background: linear-gradient(90deg, #6c8678, #547061);
+  background: linear-gradient(90deg, var(--color-accent-strong), #547061);
   font-size: 17px;
   font-weight: 600;
   text-align: center;

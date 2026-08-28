@@ -22,7 +22,7 @@ const productScreens: ProductScreen[] = [
     image: "/images/trademind/dashboard.jpg",
     alt: "Aperçu du tableau de bord TradeMind",
     fullImage: {
-      src: "/images/trademind/dashboard screen 2",
+      src: "/images/trademind/dashboard screen 2.png",
       alt: "Vue grand format du tableau de bord TradeMind",
       width: 2160,
       height: 3840,
@@ -35,7 +35,7 @@ const productScreens: ProductScreen[] = [
     image: "/images/trademind/Asset detail.jpg",
     alt: "Aperçu du détail d'un actif dans TradeMind",
     fullImage: {
-      src: "/images/trademind/Asset Detail Screen 2",
+      src: "/images/trademind/Asset Detail Screen 2.png",
       alt: "Vue grand format du détail d'un actif TradeMind",
       width: 1536,
       height: 3072,
@@ -48,7 +48,7 @@ const productScreens: ProductScreen[] = [
     image: "/images/trademind/insight.jpg",
     alt: "Aperçu des insights comportementaux TradeMind",
     fullImage: {
-      src: "/images/trademind/insight-2",
+      src: "/images/trademind/insight-2.png",
       alt: "Vue grand format des insights comportementaux TradeMind",
       width: 2160,
       height: 3840,

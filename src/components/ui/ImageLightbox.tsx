@@ -19,6 +19,9 @@ type ImageLightboxProps = {
 export default function ImageLightbox({ image, onClose }: ImageLightboxProps) {
   const [isClosing, setIsClosing] = useState(false);
   const closeTimeout = useRef<number | null>(null);
+  const closeButtonRef = useRef<HTMLButtonElement>(null);
+  const overlayRef = useRef<HTMLDivElement>(null);
+  const triggerRef = useRef<HTMLElement | null>(null);
 
   const requestClose = useCallback(() => {
     if (isClosing) {
@@ -40,13 +43,18 @@ export default function ImageLightbox({ image, onClose }: ImageLightboxProps) {
     }
 
     const previousOverflow = document.body.style.overflow;
+    const activeElement = document.activeElement;
+    triggerRef.current = activeElement instanceof HTMLElement ? activeElement : null;
     document.body.style.overflow = "hidden";
+    closeButtonRef.current?.focus();
 
     return () => {
       document.body.style.overflow = previousOverflow;
       if (closeTimeout.current !== null) {
         window.clearTimeout(closeTimeout.current);
       }
+      triggerRef.current?.focus({ preventScroll: true });
+      triggerRef.current = null;
     };
   }, [image]);
 
@@ -58,6 +66,32 @@ export default function ImageLightbox({ image, onClose }: ImageLightboxProps) {
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
         requestClose();
+        return;
+      }
+
+      if (event.key !== "Tab") {
+        return;
+      }
+
+      const focusableElements = overlayRef.current?.querySelectorAll<HTMLElement>(
+        'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])',
+      );
+
+      if (!focusableElements?.length) {
+        event.preventDefault();
+        return;
+      }
+
+      const firstElement = focusableElements[0];
+      const lastElement = focusableElements[focusableElements.length - 1];
+      const activeElement = document.activeElement;
+
+      if (event.shiftKey && activeElement === firstElement) {
+        event.preventDefault();
+        lastElement.focus();
+      } else if (!event.shiftKey && activeElement === lastElement) {
+        event.preventDefault();
+        firstElement.focus();
       }
     };
 
@@ -74,10 +108,12 @@ export default function ImageLightbox({ image, onClose }: ImageLightboxProps) {
 
   return (
     <div
+      ref={overlayRef}
       className={`${styles.overlay} ${isClosing ? styles.isClosing : ""}`}
       onClick={requestClose}
     >
       <button
+        ref={closeButtonRef}
         className={styles.closeButton}
         type="button"
         onClick={(event) => {
@@ -85,7 +121,6 @@ export default function ImageLightbox({ image, onClose }: ImageLightboxProps) {
           requestClose();
         }}
         aria-label="Fermer le visuel grand format"
-        autoFocus
       >
         <span className={styles.closeIcon} aria-hidden="true" />
       </button>

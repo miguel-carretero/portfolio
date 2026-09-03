@@ -1,0 +1,83 @@
+.section {
+  padding: 174px 24px 162px;
+}
+
+.content {
+  max-width: 980px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.eyebrow {
+  color: var(--color-accent-strong);
+  font-size: var(--font-size-eyebrow);
+  font-weight: var(--font-weight-light);
+  line-height: var(--line-height-body);
+}
+
+.title {
+  margin-top: 2px;
+  color: var(--color-text-primary);
+  font-size: var(--font-size-section-title);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-title);
+}
+
+.description {
+  max-width: 960px;
+  margin: 14px auto 0;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-body-large);
+  font-weight: var(--font-weight-light);
+  line-height: var(--line-height-body);
+}
+
+.email {
+  display: inline-block;
+  margin-top: 20px;
+  color: var(--color-accent-strong);
+  font-size: var(--font-size-body-large);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-body);
+}
+
+.email:focus-visible {
+  outline: 2px solid var(--color-text-primary);
+  outline-offset: 4px;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 40px;
+}
+
+.actions a {
+  min-width: 201px;
+}
+
+@media (max-width: 759px) {
+  .section {
+    padding: 96px 20px;
+  }
+
+  .description {
+    margin-top: 20px;
+    line-height: 1.45;
+  }
+
+  .email {
+    font-size: 20px;
+  }
+
+  .actions {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 32px;
+  }
+
+  .actions a {
+    width: min(100%, 280px);
+  }
+}

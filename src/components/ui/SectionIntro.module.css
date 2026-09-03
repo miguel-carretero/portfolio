@@ -1,0 +1,33 @@
+.intro {
+  max-width: 682px;
+}
+
+.eyebrow {
+  color: var(--color-accent-strong);
+  font-size: var(--font-size-eyebrow);
+  font-weight: var(--font-weight-light);
+  line-height: var(--line-height-body);
+}
+
+.title {
+  margin-top: 2px;
+  color: var(--color-text-primary);
+  font-size: var(--font-size-section-title);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-title);
+}
+
+.content {
+  display: grid;
+  gap: 18px;
+  margin-top: 44px;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-light);
+  line-height: var(--line-height-body-relaxed);
+}
+
+.content strong {
+  color: var(--color-accent-strong);
+  font-weight: var(--font-weight-bold);
+}

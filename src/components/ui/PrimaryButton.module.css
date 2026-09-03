@@ -1,0 +1,21 @@
+.button {
+  --button-hover-fill: #547061;
+  --button-hover-color: var(--color-background);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 18px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, var(--color-accent-strong), #547061);
+  color: var(--color-background);
+  font-size: var(--font-size-control);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-control);
+}
+
+.button:focus-visible {
+  outline: 2px solid var(--color-text-primary);
+  outline-offset: 4px;
+}

@@ -2,8 +2,34 @@
   --color-text-primary: #191919;
   --color-text-secondary: #62666c;
   --color-accent: #6c8678;
+  --color-accent-strong: #5f786a;
   --color-accent-soft: #c8d6ce;
   --color-background: #ffffff;
+
+  --font-size-hero-title: clamp(42px, 5vw, 62px);
+  --font-size-case-study-title: clamp(35px, 4vw, 50px);
+  --font-size-section-title: clamp(30px, 3vw, 36px);
+  --font-size-card-title: 28px;
+  --font-size-card-title-compact: 24px;
+  --font-size-body-large: clamp(18px, 2vw, 22px);
+  --font-size-body: 18px;
+  --font-size-card-text: 20px;
+  --font-size-card-text-compact: 19px;
+  --font-size-eyebrow: clamp(16px, 1.5vw, 18px);
+  --font-size-control: 16px;
+
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  --line-height-display: 1.05;
+  --line-height-title: 1.12;
+  --line-height-body: 1.4;
+  --line-height-body-relaxed: 1.45;
+  --line-height-control: 1.5;
+  --letter-spacing-display: -0.04em;
 }
 
 html {
@@ -13,7 +39,7 @@ html {
 html,
 body {
   max-width: 100vw;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 body {
@@ -34,4 +60,29 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+.skipLink {
+  position: fixed;
+  z-index: 200;
+  top: 16px;
+  left: 16px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  color: var(--color-background);
+  background: var(--color-text-primary);
+  font-size: var(--font-size-control);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-control);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-140%);
+}
+
+.skipLink:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
 }

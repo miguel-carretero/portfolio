@@ -1,0 +1,138 @@
+.hero {
+  padding: 48px 24px 60px;
+  background: var(--color-background);
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: minmax(0, 708px) minmax(0, 520px);
+  grid-template-areas: "content portrait";
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+  width: min(1320px, calc(100% - 80px));
+  min-height: 400px;
+  margin: 0 auto;
+}
+
+.content {
+  grid-area: content;
+  max-width: 708px;
+}
+
+.eyebrow {
+  color: var(--color-accent-strong);
+  font-size: var(--font-size-eyebrow);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-body);
+}
+
+.title {
+  margin-top: 2px;
+  color: var(--color-text-primary);
+  font-size: var(--font-size-case-study-title);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-display);
+  line-height: var(--line-height-display);
+}
+
+.description {
+  max-width: 682px;
+  margin-top: 22px;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-body-large);
+  font-weight: var(--font-weight-light);
+  line-height: var(--line-height-body);
+  text-align: justify;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.actions a:first-child {
+  min-width: 200px;
+}
+
+.portrait {
+  display: grid;
+  grid-area: portrait;
+  position: relative;
+  width: min(100%, 432px);
+  aspect-ratio: 722 / 794;
+  place-items: center;
+  justify-self: center;
+  overflow: hidden;
+  border-radius: 24px;
+  box-shadow: 0 18px 40px rgb(0 0 0 / 8%);
+}
+
+.portraitReveal {
+  display: grid;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.portraitReveal img {
+  object-fit: cover;
+  object-position: center top;
+}
+
+@media (max-width: 1100px) {
+  .hero {
+    padding-inline: 32px;
+  }
+
+  .inner {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: "portrait" "content";
+    justify-content: stretch;
+    gap: 40px;
+    width: 100%;
+    min-height: 0;
+  }
+
+  .content,
+  .description {
+    max-width: none;
+  }
+
+  .portrait {
+    width: min(100%, 460px);
+    justify-self: center;
+  }
+}
+
+@media (max-width: 759px) {
+  .hero {
+    padding: 32px 20px 72px;
+  }
+
+  .inner {
+    gap: 32px;
+  }
+
+  .portrait {
+    width: min(100%, 300px);
+    aspect-ratio: 1;
+  }
+
+  .portraitReveal img {
+    object-fit: contain;
+  }
+
+  .actions {
+    margin-top: 24px;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .description {
+    text-align: left;
+  }
+}

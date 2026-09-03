@@ -13,6 +13,24 @@ export const metadata: Metadata = {
   title: "TradeMind — Case Study Product Design | Miguel Carretero",
   description:
     "TradeMind est un concept personnel dédié à la compréhension des comportements d’investissement, explorant Product Design, UX/UI et Design System.",
+  alternates: {
+    canonical: "https://www.miguelcarretero.fr/trademind",
+  },
+  openGraph: {
+    title: "TradeMind — Case Study Product Design | Miguel Carretero",
+    description:
+      "TradeMind est un concept personnel dédié à la compréhension des comportements d’investissement, explorant Product Design, UX/UI et Design System.",
+    url: "https://www.miguelcarretero.fr/trademind",
+    siteName: "Miguel Carretero — Product Designer",
+    locale: "fr_FR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "TradeMind — Case Study Product Design | Miguel Carretero",
+    description:
+      "TradeMind est un concept personnel dédié à la compréhension des comportements d’investissement, explorant Product Design, UX/UI et Design System.",
+  },
 };
 
 export default function TradeMindPage() {

@@ -10,6 +10,7 @@ const geist = Geist({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.miguelcarretero.fr"),
   title: "Portfolio | Miguel Carretero",
   description: "Portfolio Product Designer et Front-End de Miguel Carretero.",
 };

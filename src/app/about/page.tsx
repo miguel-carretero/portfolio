@@ -9,6 +9,24 @@ export const metadata: Metadata = {
   title: "À propos — Miguel Carretero, Product Designer",
   description:
     "Découvrez l’expérience et l’approche produit de Miguel Carretero, entre compréhension métier, UI, Design System et pratique Front-End.",
+  alternates: {
+    canonical: "https://www.miguelcarretero.fr/about",
+  },
+  openGraph: {
+    title: "À propos — Miguel Carretero, Product Designer",
+    description:
+      "Découvrez l’expérience et l’approche produit de Miguel Carretero, entre compréhension métier, UI, Design System et pratique Front-End.",
+    url: "https://www.miguelcarretero.fr/about",
+    siteName: "Miguel Carretero — Product Designer",
+    locale: "fr_FR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "À propos — Miguel Carretero, Product Designer",
+    description:
+      "Découvrez l’expérience et l’approche produit de Miguel Carretero, entre compréhension métier, UI, Design System et pratique Front-End.",
+  },
 };
 
 export default function AboutPage() {

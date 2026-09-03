@@ -1,3 +1,4 @@
+import Image from "next/image";
 import PrimaryButton from "@/components/ui/PrimaryButton";
 import Reveal from "@/components/ui/Reveal";
 import SecondaryButton from "@/components/ui/SecondaryButton";
@@ -33,13 +34,15 @@ export default function AboutHero() {
           </div>
         </Reveal>
 
-        <div
-          className={styles.portrait}
-          role="img"
-          aria-label="Emplacement réservé au portrait de Miguel Carretero"
-        >
+        <div className={styles.portrait}>
           <Reveal className={styles.portraitReveal} variant="visual" delay={0.08}>
-            <span aria-hidden="true">Portrait</span>
+            <Image
+              src="/images/portfolio/miguel-portrait.jpg"
+              alt="Portrait de Miguel Carretero"
+              fill
+              priority
+              sizes="(max-width: 759px) 300px, (max-width: 1100px) 460px, 460px"
+            />
           </Reveal>
         </div>
       </div>

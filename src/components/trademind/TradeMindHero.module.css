@@ -31,7 +31,7 @@
 }
 
 .projectStatus {
-  margin-top: 8px;
+  margin-top: 0;
   color: var(--color-text-secondary);
   font-size: var(--font-size-control);
   font-weight: var(--font-weight-light);

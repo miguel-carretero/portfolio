@@ -46,7 +46,7 @@ export default function HomeHero() {
           viewport={{ once: true, amount: 0.3 }}
           transition={revealTransition}
         >
-          DESIGN · MÉTIER · TECHNIQUE
+          UI / Product Designer — Design Systems & Front-End
         </motion.p>
         <motion.h1
           id="hero-title"

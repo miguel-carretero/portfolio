@@ -9,14 +9,14 @@ import TradeMindTeaser from "@/components/home/TradeMindTeaser";
 import WhyTradeMind from "@/components/home/WhyTradeMind";
 
 export const metadata: Metadata = {
-  title: "Miguel Carretero — Product Designer & Front-End",
+  title: "Miguel Carretero — UI / Product Designer & Front-End",
   description:
     "Portfolio de Miguel Carretero, Product Designer spécialisé en UI, Design System et Front-End, avec une approche centrée sur l’expérience produit.",
   alternates: {
     canonical: "https://www.miguelcarretero.fr/",
   },
   openGraph: {
-    title: "Miguel Carretero — Product Designer & Front-End",
+    title: "Miguel Carretero — UI / Product Designer & Front-End",
     description:
       "Portfolio de Miguel Carretero, Product Designer spécialisé en UI, Design System et Front-End, avec une approche centrée sur l’expérience produit.",
     url: "https://www.miguelcarretero.fr/",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary",
-    title: "Miguel Carretero — Product Designer & Front-End",
+    title: "Miguel Carretero — UI / Product Designer & Front-End",
     description:
       "Portfolio de Miguel Carretero, Product Designer spécialisé en UI, Design System et Front-End, avec une approche centrée sur l’expérience produit.",
   },

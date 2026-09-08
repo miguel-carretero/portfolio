@@ -23,6 +23,9 @@ export default function TradeMindHero() {
           <p className={styles.eyebrow}>
             CASE STUDY <span>– TradeMind</span>
           </p>
+          <p className={styles.projectStatus}>
+            Concept personnel · Product Design, UI &amp; Design System · 2026
+          </p>
           <h1 id="trademind-hero-title" className={styles.title}>
             Comprendre l&apos;investisseur derrière le portefeuille
           </h1>

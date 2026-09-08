@@ -33,8 +33,8 @@ export default function TradeMindImpact() {
           Vers une prise de décision plus réfléchie
         </h2>
         <p className={styles.description}>
-          TradeMind accompagne progressivement l&apos;investisseur vers des
-          décisions plus sereines, plus disciplinées et plus conscientes.
+          TradeMind est conçu pour accompagner progressivement l&apos;investisseur
+          vers des décisions plus sereines, plus disciplinées et plus conscientes.
         </p>
       </Reveal>
 

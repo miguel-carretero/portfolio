@@ -16,13 +16,13 @@ export default function TradeMindSolution() {
 
           <Reveal className={styles.copy} delay={0.1}>
             <p>
-              <strong>TradeMind</strong> analyse les données du portefeuille afin
-              de révéler des indicateurs comportementaux compréhensibles et
-              directement exploitables.
+              <strong>TradeMind</strong> est conçu pour analyser les données du
+              portefeuille afin de révéler des indicateurs comportementaux
+              compréhensibles et directement exploitables.
             </p>
             <p>
-              L&apos;application ne cherche pas à prédire les marchés, mais à aider
-              l&apos;investisseur à mieux comprendre sa manière d&apos;investir.
+              TradeMind est conçu non pas pour prédire les marchés, mais pour
+              aider l&apos;investisseur à mieux comprendre sa manière d&apos;investir.
             </p>
           </Reveal>
         </div>

@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio — Miguel Carretero
 
-## Getting Started
+Portfolio professionnel de Miguel Carretero, UI / Product Designer — Design Systems & Front-End, avec près de 20 ans d’expérience dans le numérique.
 
-First, run the development server:
+👉 [www.miguelcarretero.fr](https://www.miguelcarretero.fr)
+
+## À propos du projet
+
+Ce portfolio présente mon parcours, mon approche du design produit et TradeMind, un concept personnel conçu en 2026 autour de l’investissement et de la compréhension des comportements investisseurs.
+
+Les interfaces ont d’abord été conçues dans Figma, puis développées en Front-End afin de préserver la cohérence entre intention de design, responsive et implémentation.
+
+## Stack
+
+- Next.js
+- React
+- TypeScript
+- CSS Modules
+- Vercel
+
+## Principes d’implémentation
+
+- composants réutilisables
+- responsive design
+- HTML sémantique
+- cohérence entre design et implémentation
+- animations et micro-interactions sobres
+- prise en compte de `prefers-reduced-motion`
+- attention portée aux performances et à la maintenabilité
+
+## Design & développement
+
+**Conception, UI et développement Front-End : Miguel Carretero**
+
+Ce projet illustre mon positionnement hybride : relier compréhension des besoins, qualité d’interface, logique de composants et faisabilité Front-End.
+
+## Lancer le projet localement
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Puis ouvrir [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+[Voir le portfolio](https://www.miguelcarretero.fr)

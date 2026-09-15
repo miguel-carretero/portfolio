@@ -22,7 +22,7 @@ export default function Footer() {
         <div className={styles.actions} aria-label="Liens professionnels">
           <a
             className={`${styles.action} ${styles.linkedinAction} ${hoverStyles.buttonHover}`}
-            href="https://www.linkedin.com/in/miguel-angel-carretero-000b1747"
+            href="https://www.linkedin.com/in/miguel-carretero-design"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Profil LinkedIn de Miguel Carretero"

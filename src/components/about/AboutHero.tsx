@@ -22,7 +22,7 @@ export default function AboutHero() {
           </p>
           <div className={styles.actions}>
             <SecondaryButton
-              href="https://www.linkedin.com/in/miguel-angel-carretero-000b1747"
+              href="https://www.linkedin.com/in/miguel-carretero-design"
               target="_blank"
               rel="noopener noreferrer"
             >

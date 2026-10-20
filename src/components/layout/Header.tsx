@@ -10,6 +10,7 @@ import styles from "./Header.module.css";
 const navigationItems = [
   { href: "/", label: "Home", mobileLabel: "Home" },
   { href: "/trademind", label: "TradeMind", mobileLabel: "TradeMind" },
+  { href: "/thelab", label: "The Lab", mobileLabel: "The Lab" },
   { href: "/about", label: "About", mobileLabel: "À propos" },
 ];
 
@@ -37,6 +38,12 @@ export default function Header() {
     }
 
     const previousOverflow = document.body.style.overflow;
+    const desktopViewport = window.matchMedia("(min-width: 760px)");
+    const handleViewportChange = (event: MediaQueryListEvent) => {
+      if (event.matches) {
+        setIsMenuOpen(false);
+      }
+    };
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
         setIsMenuOpen(false);
@@ -46,11 +53,13 @@ export default function Header() {
 
     document.body.style.overflow = "hidden";
     document.addEventListener("keydown", handleKeyDown);
+    desktopViewport.addEventListener("change", handleViewportChange);
     firstMenuLinkRef.current?.focus();
 
     return () => {
       document.body.style.overflow = previousOverflow;
       document.removeEventListener("keydown", handleKeyDown);
+      desktopViewport.removeEventListener("change", handleViewportChange);
     };
   }, [isMenuOpen]);
 

@@ -380,3 +380,22 @@
     }
   }
 }
+
+@media (min-width: 760px) and (max-width: 1100px) {
+  .header {
+    grid-template-columns: 128px minmax(0, 1fr) auto;
+    column-gap: 20px;
+  }
+
+  .logo {
+    margin-left: 0;
+  }
+
+  .navigation {
+    gap: 16px;
+  }
+
+  .cvLink {
+    white-space: nowrap;
+  }
+}

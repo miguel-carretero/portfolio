@@ -30,6 +30,13 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
+# local UI diagnostics and Ruflo policy journals
+/.tmp/innsight-ai-check/
+/.tmp/innsight-css-trial/
+/.tmp/thelab-*-check/
+/.claude-flow/policy/state.json
+/.claude-flow/policy/ledger-anchors.json
+
 # env files (can opt-in for committing if needed)
 .env*
 

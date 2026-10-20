@@ -110,6 +110,9 @@ export default function ImageLightbox({ image, onClose }: ImageLightboxProps) {
     <div
       ref={overlayRef}
       className={`${styles.overlay} ${isClosing ? styles.isClosing : ""}`}
+      role="dialog"
+      aria-modal="true"
+      aria-label={image.alt}
       onClick={requestClose}
     >
       <button
@@ -125,12 +128,7 @@ export default function ImageLightbox({ image, onClose }: ImageLightboxProps) {
         <span className={styles.closeIcon} aria-hidden="true" />
       </button>
 
-      <div
-        className={styles.dialog}
-        role="dialog"
-        aria-modal="true"
-        aria-label={image.alt}
-      >
+      <div className={styles.dialog}>
         <Image
           className={styles.image}
           src={image.src}

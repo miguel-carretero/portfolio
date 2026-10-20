@@ -64,7 +64,7 @@ export default function Header() {
   }, [isMenuOpen]);
 
   return (
-    <header className={`${styles.header} ${isScrolled ? styles.scrolled : ""}`}>
+    <header className={`${styles.header} ${isScrolled ? styles.scrolled : ""} ${isMenuOpen ? styles.menuOpen : ""}`}>
       <Link className={styles.logo} href="/" aria-label="Accueil Miguel Carretero">
         <span className={styles.logoVisual}>
           <Image
@@ -92,23 +92,25 @@ export default function Header() {
         className={`${styles.navigation} ${isMenuOpen ? styles.navigationOpen : ""}`}
         aria-label="Navigation principale"
       >
-        {navigationItems.map((item, index) => {
-          const isActive = pathname === item.href;
+        <div className={styles.navigationContent}>
+          {navigationItems.map((item, index) => {
+            const isActive = pathname === item.href;
 
-          return (
-            <Link
-              key={item.href}
-              className={`${styles.navigationLink} ${isActive ? styles.active : ""}`}
-              href={item.href}
-              aria-current={isActive ? "page" : undefined}
-              onClick={() => setIsMenuOpen(false)}
-              ref={index === 0 ? firstMenuLinkRef : undefined}
-            >
-              <span className={styles.desktopLabel}>{item.label}</span>
-              <span className={styles.mobileLabel}>{item.mobileLabel}</span>
-            </Link>
-          );
-        })}
+            return (
+              <Link
+                key={item.href}
+                className={`${styles.navigationLink} ${isActive ? styles.active : ""}`}
+                href={item.href}
+                aria-current={isActive ? "page" : undefined}
+                onClick={() => setIsMenuOpen(false)}
+                ref={index === 0 ? firstMenuLinkRef : undefined}
+              >
+                <span className={styles.desktopLabel}>{item.label}</span>
+                <span className={styles.mobileLabel}>{item.mobileLabel}</span>
+              </Link>
+            );
+          })}
+        </div>
       </nav>
 
       <a className={`${styles.cvLink} ${hoverStyles.buttonHover}`} href="/miguel-carretero-cv.pdf" download>

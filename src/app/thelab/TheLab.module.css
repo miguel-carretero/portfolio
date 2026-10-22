@@ -5,7 +5,7 @@
   gap: 20px;
   max-width: 1440px;
   margin-inline: auto;
-  padding: 48px 20px 56px;
+  padding: 48px 20px 80px;
   text-align: center;
 }
 
@@ -30,7 +30,7 @@
 .project {
   max-width: 1440px;
   margin-inline: auto;
-  padding: 0 20px 64px;
+  padding: 0 20px 80px;
 }
 
 .presentation {
@@ -96,7 +96,7 @@
 }
 
 .conception {
-  padding: 48px 20px;
+  padding: 80px 20px;
   background: #fafaf8;
 }
 
@@ -212,6 +212,7 @@
 
 @media (min-width: 760px) {
   .conception {
+    padding-block: 120px;
     padding-inline: 40px;
   }
 
@@ -243,11 +244,11 @@
   }
 
   .introduction {
-    padding: 64px 40px;
+    padding: 64px 40px 120px;
   }
 
   .project {
-    padding: 0 40px 80px;
+    padding: 0 40px 120px;
   }
 }
 
@@ -263,7 +264,7 @@
 
 @media (min-width: 1101px) {
   .conception {
-    padding: 56px 60px 48px;
+    padding-inline: 60px;
   }
 
   .conceptionContent {
@@ -295,7 +296,7 @@
 
   .introduction {
     gap: 24px;
-    padding: 93px 60px 100px;
+    padding: 93px 60px 120px;
   }
 
   .title {

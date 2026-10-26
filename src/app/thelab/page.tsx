@@ -27,6 +27,7 @@ export default function TheLabPage() {
   return (
     <main id="main-content" tabIndex={-1}>
       <section className={styles.introduction} aria-labelledby="thelab-title">
+        <p className={styles.eyebrow}>EXPÉRIMENTATIONS</p>
         <h1 id="thelab-title" className={styles.title}>The Lab</h1>
         <p className={styles.introductionCopy}>
           Mon laboratoire d’idées et d’expérimentations autour du produit et des interfaces.
@@ -48,15 +49,14 @@ export default function TheLabPage() {
             </div>
             <div className={styles.description}>
               <p>
-                J’ai imaginé InnSight pour aider la direction d’un groupe hôtelier à repérer
-                les établissements qui demandent son attention. La vue d’ensemble permet de
-                comparer leurs performances, puis d’examiner les variations d’occupation et
-                de prix moyen au fil des jours.
+                J’ai imaginé InnSight comme un espace de pilotage pour la direction d’un groupe
+                hôtelier : suivre les performances, garder le cap sur les objectifs et
+                coordonner les actions avec les équipes locales.
               </p>
               <p>
-                Un assistant IA accompagne cette lecture : il met en évidence les écarts et
-                propose des points à vérifier avec les équipes locales, pour passer du
-                constat au suivi.
+                Le parcours présenté explore une première étape : repérer un établissement qui
+                demande de l’attention, examiner ses résultats et préparer le suivi avec un
+                assistant IA contextualisé.
               </p>
             </div>
             <div className={styles.details}>

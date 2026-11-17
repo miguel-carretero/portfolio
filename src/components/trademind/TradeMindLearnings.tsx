@@ -13,10 +13,15 @@ export default function TradeMindLearnings() {
 
       <Reveal className={styles.content} delay={0.08}>
         <p>
-          Ce projet m&apos;a confirmé qu&apos;un bon Product Design ne consiste pas
-          uniquement à concevoir des interfaces. Il s&apos;agit avant tout de
-          comprendre un problème, construire une vision claire et créer une
-          solution cohérente qui apporte une réelle valeur aux utilisateurs.
+          Ce projet m’a confirmé que le Product Design ne s’arrête pas aux interfaces.
+          Il faut aussi <strong>comprendre les besoins</strong>, tenir compte des contraintes et donner
+          une direction cohérente au produit.
+        </p>
+        <p>
+          En réfléchissant à la commercialisation de TradeMind, j’ai approfondi les
+          questions de <strong>faisabilité, de différenciation et de modèle économique</strong>. Cette
+          exploration m’a permis de prendre du recul et d’envisager d’autres possibilités
+          pour le projet.
         </p>
       </Reveal>
     </section>

@@ -45,17 +45,13 @@ export default function TradeMindProductVision() {
           </Reveal>
 
           <Reveal className={styles.copy} delay={0.1}>
-            <p>
-              La plupart des applications d&apos;investissement utilisent les
-              comportements comme une fonctionnalité supplémentaire.
-            </p>
             <p className={styles.highlight}>
-              TradeMind adopte l&apos;approche inverse.
+              TradeMind place les comportements au cœur de son approche.
             </p>
             <p>
-              Le portefeuille devient un support d&apos;observation permettant de
-              comprendre les habitudes, les biais et les mécanismes de décision
-              de l&apos;investisseur.
+              Le portefeuille devient un support d’observation permettant de mieux
+              comprendre les habitudes, les biais et les mécanismes de décision de
+              l’investisseur.
             </p>
           </Reveal>
         </div>

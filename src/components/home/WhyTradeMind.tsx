@@ -41,10 +41,8 @@ export default function WhyTradeMind() {
             transition={{ duration: 0.54, delay: 0.16, ease: [0.22, 1, 0.36, 1] }}
           >
             <p>
-              Ce projet est né d&apos;un constat simple : les plateformes
-              d&apos;investissement fournissent de nombreuses données financières,
-              mais très peu d&apos;informations sur les comportements des
-              investisseurs.
+              Ce projet est né d’une question : comment aider les investisseurs à mieux
+              comprendre les comportements qui influencent leurs décisions ?
             </p>
             <p>
               <strong>TradeMind explore une approche différente</strong>, centrée

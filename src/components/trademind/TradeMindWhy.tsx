@@ -15,11 +15,10 @@ export default function TradeMindWhy() {
 
       <Reveal className={styles.content} delay={0.1}>
         <p>
-          Les plateformes d&apos;investissement fournissent une quantité importante
-          de données financières : performances, graphiques, actualités ou
-          indicateurs de marché. En revanche, elles offrent très peu d&apos;outils
-          permettant aux investisseurs de comprendre les comportements qui
-          influencent leurs décisions.
+          Les plateformes d’investissement donnent accès à de nombreuses données
+          financières. TradeMind explore une autre question : comment aider
+          l’investisseur à prendre du recul sur les comportements qui influencent
+          ses décisions ?
         </p>
         <p className={styles.conviction}>TradeMind est né de cette conviction :</p>
         <p className={styles.highlight}>
